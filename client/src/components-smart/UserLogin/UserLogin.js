@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import TextField from 'components-dumb/TextField/TextField'
+import TextField from 'components-dumb/TextField/TextField';
+import BasicButton from 'components-dumb/BasicButton/BasicButton';
 import { connect } from 'react-redux';
-import { editUsername } from 'actions/user.action';
+import { editUsername, editPassword } from 'actions/user.action';
 
 
 require('./user-login.less');
@@ -9,26 +10,35 @@ require('./user-login.less');
 
 @connect((store) => {
     return {
-        username: store.userReducer.username
+        loginUser: store.userReducer.loginUser
     }
 })
 
 
-class componentName extends Component {
-
-    _onChange = (val) => {
-        this.props.dispatch(editUsername(val));
-    }
+class UserLogin extends Component {
 
     render() {
-        console.log(123);
+
         return (
-           <user-login>
-               hello world
-                <TextField onChange={this._onChange} value={this.props.username} />
+            <user-login>
+                <h2 className='white-text margin-tb-20'>Thailand Reservation</h2>
+                <TextField
+                    onChange={(val) => this.props.dispatch(editUsername(val))}
+                    className='margin-tb-20'
+                    placeholder='用户名'
+                    spanText='@'
+                    value={this.props.loginUser.username} />
+                <TextField
+                    onChange={(val) => this.props.dispatch(editPassword(val))}
+                    className='margin-tb-20'
+                    placeholder='密码'
+                    type='password'
+                    spanText='@'
+                    value={this.props.loginUser.password} />
+                <BasicButton className='btn-info width-100p' label='登录' />
             </user-login>
         );
     }
 }
 
-export default componentName;
+export default UserLogin;

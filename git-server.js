@@ -10,35 +10,37 @@ function respond(req, res, next) {
             console.log(`pull exec error: ${error}`.bgRed);
             return;
         } else {
-            console.log("pull success".bgGreen);
-            setTimeout(function () {
-                console.log("start npm install");
-                exec('npm run clientinstall', (err, stdout, stderr) => {
-                    if (err) {
-                        console.log('install client wrong'.bgRed);
-                    } else {
-                        console.log('install client executed'.bgGreen);
-                    }
-                })
-                exec('npm run serverinstall', (err, stdout, stderr) => {
-                    if (err) {
-                        console.log('install server wrong'.bgRed);
-                    } else {
-                        console.log('install server executed'.bgGreen);
-                    }
-                })
-            }, 5000)
+            console.log("---------pull success----------".bgGreen);
+            console.log(stdout.bgGreen);
+            console.log("start npm install");
 
+            exec('npm run clientinstall', (err, stdout, stderr) => {
+                if (err) {
+                    console.log('install client wrong'.bgRed);
+                } else {
+                    console.log('install client executed'.bgGreen);
+                }
+            })
+
+            exec('npm run serverinstall', (err, stdout, stderr) => {
+                if (err) {
+                    console.log('install server wrong'.bgRed);
+                } else {
+                    console.log('install server executed'.bgGreen);
+                }
+            })
         }
 
     });
-    res.send("ok");
-
-    res.send(req.params);
+    res.send("get events and execute");
     next();
 }
 
-var server = restify.createServer({ name: 'Webhook', version: '1.0.0', port: 4567 });
+var server = restify.createServer({
+    name: 'Webhook',
+    version: '1.0.0',
+    port: 4567
+});
 
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
@@ -46,5 +48,5 @@ server.use(restify.bodyParser());
 server.post('/payload', respond);
 
 server.listen(4567, function () {
-    console.log('%s listening at %s', server.name, server.url);
+    console.log('%s listening at %s'.bgCyan, server.name, server.url);
 });

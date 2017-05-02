@@ -4,3 +4,10 @@ export function editUsername(val) {
         payload: val
     }
 }
+
+export function editPassword(val) {
+    return {
+        type: 'EDIT_PASSWROD',
+        payload: val
+    }
+}

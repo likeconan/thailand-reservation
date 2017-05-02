@@ -1,11 +1,25 @@
 export default function reducer(state = {
-    username: ''
+    loginUser: {
+        username: '',
+        password: ''
+    }
 }, action) {
     switch (action.type) {
         case 'EDIT_USERNAME':
             return {
                 ...state,
-                username: action.payload
+                loginUser: {
+                    ...state,
+                    username: action.payload
+                }
+            }
+        case 'EDIT_PASSWORD':
+            return {
+                ...state,
+                loginUser: {
+                    ...state,
+                    password: action.payload
+                }
             }
         default:
             return state;

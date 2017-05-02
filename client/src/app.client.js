@@ -13,8 +13,8 @@ ReactDOM.render(
     <Provider store={store}>
         <Router>
             <div>
-                <Pages.Layout />
-                <Route exact path="/" component={Pages.Home} />
+                {/*<Pages.Layout />*/}
+                <Route exact path="/" component={Pages.Login} />
             </div>
         </Router>
     </Provider>

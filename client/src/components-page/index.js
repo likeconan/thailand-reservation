@@ -1,7 +1,7 @@
-import Home from './home.page'
+import Login from './login.page'
 import Layout from './layout'
 
 module.exports = {
-    'Home': Home,
+    'Login': Login,
     'Layout': Layout
 }
