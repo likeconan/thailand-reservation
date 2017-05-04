@@ -2,6 +2,10 @@ export default function reducer(state = {
     loginUser: {
         username: '',
         password: ''
+    },
+    validation: {
+        username: false,
+        password: false
     }
 }, action) {
     switch (action.type) {
@@ -9,16 +13,24 @@ export default function reducer(state = {
             return {
                 ...state,
                 loginUser: {
-                    ...state,
-                    username: action.payload
+                    ...state.loginUser,
+                    username: action.payload.val
+                },
+                validation: {
+                    ...state.validation,
+                    username: action.payload.isValidated
                 }
             }
         case 'EDIT_PASSWORD':
             return {
                 ...state,
                 loginUser: {
-                    ...state,
-                    password: action.payload
+                    ...state.loginUser,
+                    password: action.payload.val
+                },
+                validation: {
+                    ...state.validation,
+                    password: action.payload.isValidated
                 }
             }
         default:
