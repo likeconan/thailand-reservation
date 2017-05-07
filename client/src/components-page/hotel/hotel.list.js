@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class HommePage extends Component {
+class Hotels extends Component {
     render() {
         return (
             <div>
-                Home
+                this is the hotel list page
             </div>
         );
     }
 }
 
-export default HommePage;
+export default Hotels;
