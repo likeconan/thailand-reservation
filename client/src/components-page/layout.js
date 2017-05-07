@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
-
 import Logged from './logged';
 import LeftNav from './left.nav';
+
+import { Row, Col } from 'react-bootstrap';
 
 class Layout extends Component {
     constructor(props) {
@@ -25,12 +23,11 @@ class Layout extends Component {
     render() {
         return (
             <div>
-                <AppBar title="Home"
-                onLeftIconButtonTouchTap={this.clickLeftIconButton.bind(this)}
-                iconElementRight={<Logged />}/>
-
-                <LeftNav open={this.state.drawerOpen}
-                onRequestChangeNavDrawer={this.handleChangeRequestNavDrawer}/>
+             <LeftNav open={this.state.drawerOpen}
+                    onRequestChangeNavDrawer={this.handleChangeRequestNavDrawer}/>
+            <AppBar title="Home"
+                    onLeftIconButtonTouchTap={this.clickLeftIconButton.bind(this)}
+                    iconElementRight={<Logged />}/>
             </div>
         );
     }
