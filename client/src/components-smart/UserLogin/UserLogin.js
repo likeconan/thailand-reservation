@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import TextField from 'components-dumb/TextField/TextField'
+import FormTextField from 'components-dumb/FormTextField/FormTextField';
+import RaisedButton from 'material-ui/RaisedButton';
 import { connect } from 'react-redux';
-import { editUsername } from 'actions/user.action';
+import { editUsername, editPassword } from 'actions/user.action';
 
 
 require('./user-login.less');
@@ -9,26 +10,62 @@ require('./user-login.less');
 
 @connect((store) => {
     return {
-        username: store.userReducer.username
+        loginUser: store.userReducer.loginUser,
+        validation: store.userReducer.validation
     }
 })
 
 
-class componentName extends Component {
+class UserLogin extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            submitted: false
+        }
+    }
 
-    _onChange = (val) => {
-        this.props.dispatch(editUsername(val));
+    _loginClick = () => {
+        this.setState({
+            submitted: true
+        });
+
     }
 
     render() {
-        console.log(123);
+        const width = {
+            width: '100%'
+        }
         return (
-           <user-login>
-               hello world
-                <TextField onChange={this._onChange} value={this.props.username} />
+
+            <user-login>
+                <h2 className='white-text margin-tb-20'>Thailand Reservation</h2>
+                <FormTextField
+                    floatingLabelText='Email'
+                    white={true}
+                    validated={this.props.validation.username}
+                    style={width}
+                    submitted={this.state.submitted}
+                    onChange={(e) => this.props.dispatch(editUsername(e.target.value))}
+                    errorText='请输入正确的邮箱地址'
+                    value={this.props.loginUser.username} />
+                <FormTextField
+                    onChange={(e) => this.props.dispatch(editPassword(e.target.value))}
+                    floatingLabelText='Password'
+                    white={true}
+                    style={width}
+                    submitted={this.state.submitted}
+                    validated={this.props.validation.password}
+                    type='password'
+                    errorText='请填写密码'
+                    value={this.props.loginUser.password} />
+                <RaisedButton
+                    className='width-100p'
+                    label='Get Started'
+                    primary={true}
+                    onClick={this._loginClick} />
             </user-login>
         );
     }
 }
 
-export default componentName;
+export default UserLogin;

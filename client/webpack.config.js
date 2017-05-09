@@ -29,7 +29,7 @@ module.exports = {
             '.webpack.js', '.web.js', '.ts', '.tsx', '.js'
         ],
         modules: [
-            'node_modules', path.resolve(__dirname, 'client')
+            'node_modules', path.resolve(__dirname, 'src')
         ]
     },
 

@@ -8,6 +8,10 @@ import {green500, cyan700,
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
+import Pages from 'components-page';
+import store from './store';
+import { Provider } from 'react-redux';
+
 import {
     BrowserRouter as Router,
     Route,
@@ -37,17 +41,27 @@ const muiTheme = getMuiTheme({
   },
 });
 
+injectTapEventPlugin();
+
+const customMui = getMuiTheme({
+    stepper: {
+        textColor: "rgba(255, 255, 255, 0.87)",
+        disabledTextColor: "rgba(255, 255, 255, 0.26)"
+    }
+});
+
 ReactDOM.render(
+  <Provider store={store}>
     <MuiThemeProvider muiTheme={muiTheme}>
-        <Provider store={store}>
              <Router>
                 <div>
-                    <Route path = "/" component={Pages.Layout} />
+                    <Pages.Layout/>
                     <Route path = "/hotel" component={Pages.Hotel.HotelList} />
                     <Route path = "/user" component = {Pages.Users.UserList}/> 
                     <Route path = "/login" component = {Pages.login}/> 
                 </div>
             </Router>
-        </Provider>
-    </MuiThemeProvider>,
-    document.getElementById('root'));
+    </MuiThemeProvider>
+  </Provider>
+, document.getElementById('root'));
+
