@@ -4,7 +4,7 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
-export default class Logged extends Component{
+export default class LoggedMenu extends Component{
    render(){
        return (
         <IconMenu

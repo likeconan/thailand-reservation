@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Hotels extends Component {
+class HotelItem extends Component {
     render() {
         return (
             <div>
-                this is the hotel list page
+                <p>{this.props.data.name}</p>
             </div>
         );
     }
 }
 
-export default Hotels;
+export default HotelItem;

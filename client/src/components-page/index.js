@@ -1,14 +1,10 @@
 import Login from './login.page'
 import Layout from './layout'
-import Account from './account'
-import Hotel from './hotel'
+import Hotel from './hotel.page'
 
 
 module.exports = {
-
     'Layout': Layout,
-    'Users': Account,
-    'Hotel': Hotel
+    'Hotel': Hotel,
     'Login': Login,
-
 }
