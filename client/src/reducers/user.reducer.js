@@ -1,25 +1,25 @@
 export default function reducer(state = {
     loginUser: {
-        username: '',
+        email: '',
         password: ''
     },
     validation: {
-        username: false,
+        email: false,
         password: false
     },
     isAuthorize: false,
 }, action) {
     switch (action.type) {
-        case 'EDIT_USERNAME':
+        case 'EDIT_EMAIL':
             return {
                 ...state,
                 loginUser: {
                     ...state.loginUser,
-                    username: action.payload.val
+                    email: action.payload.val
                 },
                 validation: {
                     ...state.validation,
-                    username: action.payload.isValidated
+                    email: action.payload.isValidated
                 }
             }
         case 'EDIT_PASSWORD':

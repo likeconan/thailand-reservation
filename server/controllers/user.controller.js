@@ -6,27 +6,20 @@ class UserController extends BaseCtrl {
         this.initalAction();
     }
     initalAction() {
-        // super.addAction({
-        //     path: '/users',
-        //     method: 'post'
-        // }, (req, res) => {
-        //     super.excuteDb(res, {
-        //         model: new Models.UserModel(req.body),
-        //         method: 'save',
-        //         callback: (data) => {
-        //             res.send({
-        //                 isSuccess: true,
-        //                 data: data
-        //             });
-        //         }
-        //     })
-        // })
+        super.addAction({
+            path: '/users',
+            method: 'post'
+        }, (req, res) => {
+            new Models.UserModel(req.body).save((err, doc) => {
+                res.send(doc);
+            })
+        })
 
         super.addAction({
             path: '/users',
             method: 'get'
         }, (req, res) => {
-            Models.UserModel.where(req.params).findOne((err, doc) => {
+            Models.UserModel.where(req.query).findOne((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     if (doc) {
                         res.send({

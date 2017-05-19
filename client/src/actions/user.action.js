@@ -1,9 +1,9 @@
 import validator from 'validator';
 import thaxios from 'utilities/thaxios';
 
-export function editUsername(val) {
+export function editEmail(val) {
     return {
-        type: 'EDIT_USERNAME',
+        type: 'EDIT_EMAIL',
         payload: {
             val: val,
             isValidated: validator.isEmail(val)

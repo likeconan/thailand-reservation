@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FormTextField from 'components-dumb/FormTextField/FormTextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import { connect } from 'react-redux';
-import { editUsername, editPassword, login } from 'actions/user.action';
+import { editEmail, editPassword, login } from 'actions/user.action';
 
 
 require('./user-login.less');
@@ -28,7 +28,7 @@ class UserLogin extends Component {
         this.setState({
             submitted: true
         });
-        if (this.props.validation.password && this.props.validation.username) {
+        if (this.props.validation.password && this.props.validation.email) {
             this.props.dispatch(login(this.props.loginUser));
         }
 
@@ -45,12 +45,12 @@ class UserLogin extends Component {
                 <FormTextField
                     floatingLabelText='Email'
                     white={true}
-                    validated={this.props.validation.username}
+                    validated={this.props.validation.email}
                     style={width}
                     submitted={this.state.submitted}
-                    onChange={(e) => this.props.dispatch(editUsername(e.target.value))}
+                    onChange={(e) => this.props.dispatch(editEmail(e.target.value))}
                     errorText='请输入正确的邮箱地址'
-                    value={this.props.loginUser.username} />
+                    value={this.props.loginUser.email} />
                 <FormTextField
                     onChange={(e) => this.props.dispatch(editPassword(e.target.value))}
                     floatingLabelText='Password'
