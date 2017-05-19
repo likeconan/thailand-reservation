@@ -20,12 +20,13 @@ class Layout extends Component {
     };
     render() {
         return (
-            <div>
+            <div className='layout'>
                 <LeftNav open={this.state.drawerOpen}
                     onRequestChangeNavDrawer={this.handleChangeRequestNavDrawer} />
                 <AppBar title="Home"
                     onLeftIconButtonTouchTap={this.clickLeftIconButton.bind(this)}
                     iconElementRight={<LoggedMenu />} />
+                {this.props.children}
             </div>
         );
     }

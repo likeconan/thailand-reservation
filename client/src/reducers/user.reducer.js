@@ -6,7 +6,8 @@ export default function reducer(state = {
     validation: {
         username: false,
         password: false
-    }
+    },
+    isAuthorize: false,
 }, action) {
     switch (action.type) {
         case 'EDIT_USERNAME':

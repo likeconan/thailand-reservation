@@ -1,4 +1,5 @@
 import validator from 'validator';
+import thaxios from 'utilities/thaxios';
 
 export function editUsername(val) {
     return {
@@ -11,12 +12,24 @@ export function editUsername(val) {
 }
 
 export function editPassword(val) {
-    debugger
     return {
         type: 'EDIT_PASSWORD',
         payload: {
             val: val,
             isValidated: !validator.isEmpty(val)
         }
+    }
+}
+
+export function login(obj) {
+    return function (dispatch) {
+        debugger
+        thaxios({
+            url: 'users',
+            method: 'GET',
+            params: obj
+        }).then((data) => {
+            console.log(data)
+        })
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FormTextField from 'components-dumb/FormTextField/FormTextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import { connect } from 'react-redux';
-import { editUsername, editPassword } from 'actions/user.action';
+import { editUsername, editPassword, login } from 'actions/user.action';
 
 
 require('./user-login.less');
@@ -28,6 +28,9 @@ class UserLogin extends Component {
         this.setState({
             submitted: true
         });
+        if (this.props.validation.password && this.props.validation.username) {
+            this.props.dispatch(login(this.props.loginUser));
+        }
 
     }
 

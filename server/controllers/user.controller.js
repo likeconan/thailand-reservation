@@ -6,21 +6,21 @@ class UserController extends BaseCtrl {
         this.initalAction();
     }
     initalAction() {
-        super.addAction({
-            path: '/users',
-            method: 'post'
-        }, (req, res) => {
-            super.excuteDb(res, {
-                model: new Models.UserModel(req.body),
-                method: 'save',
-                callback: (data) => {
-                    res.send({
-                        isSuccess: true,
-                        data: data
-                    });
-                }
-            })
-        })
+        // super.addAction({
+        //     path: '/users',
+        //     method: 'post'
+        // }, (req, res) => {
+        //     super.excuteDb(res, {
+        //         model: new Models.UserModel(req.body),
+        //         method: 'save',
+        //         callback: (data) => {
+        //             res.send({
+        //                 isSuccess: true,
+        //                 data: data
+        //             });
+        //         }
+        //     })
+        // })
 
         super.addAction({
             path: '/users',
@@ -29,9 +29,7 @@ class UserController extends BaseCtrl {
             super.excuteDb(res, {
                 model: Models.UserModel,
                 method: 'find',
-                options: {
-                    email: '321'
-                },
+                options: req.params,
                 callback: (data) => {
                     res.send({
                         isSuccess: true,

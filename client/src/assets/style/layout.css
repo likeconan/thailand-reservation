@@ -109,3 +109,10 @@ h6 {
     background-size: cover;
     background-position: 50% 50%;
 }
+
+/**************Layout*****************/
+.layout{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
