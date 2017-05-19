@@ -1,4 +1,6 @@
 import axios from 'axios';
+import store from 'store';
+import { showToast } from 'actions/toast.action';
 
 export default (obj) => {
     var p = new Promise((resolve, reject) => {
@@ -12,12 +14,17 @@ export default (obj) => {
             if (response.data.isSuccess) {
                 resolve(response.data.data);
             } else {
-                console.log(response.data.errors);
-                reject(response.data.errors);
+                store.dispatch(showToast({
+                    className: 'error-toast',
+                    message: response.data.errors
+                }))
             }
         }).catch((err) => {
             //need to be do with toast
-            console.log(err);
+            store.dispatch(showToast({
+                className: 'error-toast',
+                message: 'Opps,内部出现问题了，我们会尽快解决'
+            }))
             reject(err);
         });
     })

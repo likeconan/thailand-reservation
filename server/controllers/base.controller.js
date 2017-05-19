@@ -22,20 +22,23 @@ class BaseController {
             .push(newAct)
     }
 
-    excuteDb(res, spec) {
-        try {
-            spec.model[spec.method](spec.options).then((doc, count) => {
-                if (doc.errors) {
-                    console.log(err);
+    handleCallback(res, err) {
+        return new Promise(function (fulfill, reject) {
+            try {
+                if (err) {
+                    res.send({
+                        isSuccess: false,
+                        errors: err
+                    });
+                    reject(error)
                 } else {
-                    if (spec.callback) {
-                        spec.callback(doc);
-                    }
+                    fulfill();
                 }
-            });
-        } catch (error) {
-            res.status(500).send('error')
-        }
+            } catch (error) {
+                res.status(500).send(error)
+                reject(error)
+            }
+        })
     }
 }
 

@@ -23,7 +23,6 @@ export function editPassword(val) {
 
 export function login(obj) {
     return function (dispatch) {
-        debugger
         thaxios({
             url: 'users',
             method: 'GET',

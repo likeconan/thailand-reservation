@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import LoggedMenu from 'components-smart/LoggedMenu/LoggedMenu';
+import Toast from 'components-smart/Toast/Toast';
 import LeftNav from 'components-dumb/LeftNav/LeftNav';
 
 class Layout extends Component {
@@ -26,6 +27,7 @@ class Layout extends Component {
                 <AppBar title="Home"
                     onLeftIconButtonTouchTap={this.clickLeftIconButton.bind(this)}
                     iconElementRight={<LoggedMenu />} />
+                <Toast />
                 {this.props.children}
             </div>
         );

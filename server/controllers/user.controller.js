@@ -26,16 +26,20 @@ class UserController extends BaseCtrl {
             path: '/users',
             method: 'get'
         }, (req, res) => {
-            super.excuteDb(res, {
-                model: Models.UserModel,
-                method: 'find',
-                options: req.params,
-                callback: (data) => {
-                    res.send({
-                        isSuccess: true,
-                        data: data
-                    });
-                }
+            Models.UserModel.where(req.params).findOne((err, doc) => {
+                super.handleCallback(res, err).then(() => {
+                    if (doc) {
+                        res.send({
+                            isSuccess: true,
+                            data: doc
+                        })
+                    } else {
+                        res.send({
+                            isSuccess: false,
+                            errors: '用户名/密码错误'
+                        })
+                    }
+                })
             })
         })
     }
