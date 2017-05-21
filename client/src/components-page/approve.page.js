@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-
-
 class ApprovePage extends Component {
     render() {
         return (

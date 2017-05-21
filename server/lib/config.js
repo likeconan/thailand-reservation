@@ -1,6 +1,6 @@
 module.exports = {
     development: {
-        port: 9000,
-        db_connect:'mongodb://localhost:27017/thailand'
+        port: 3030,
+        db_connect:'mongodb://localhost:27017/Thailand'
     }
 }

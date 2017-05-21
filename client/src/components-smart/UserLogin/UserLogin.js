@@ -4,9 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { connect } from 'react-redux';
 import { editEmail, editPassword, login } from 'actions/user.action';
 
-
 require('./user-login.less');
-
 
 @connect((store) => {
     return {
@@ -14,7 +12,6 @@ require('./user-login.less');
         validation: store.userReducer.validation
     }
 })
-
 
 class UserLogin extends Component {
     constructor(props) {
@@ -30,6 +27,7 @@ class UserLogin extends Component {
         });
         if (this.props.validation.password && this.props.validation.email) {
             this.props.dispatch(login(this.props.loginUser));
+            
         }
 
     }
@@ -39,7 +37,6 @@ class UserLogin extends Component {
             width: '100%'
         }
         return (
-
             <user-login>
                 <h2 className='white-text margin-tb-20'>Thailand Reservation</h2>
                 <FormTextField

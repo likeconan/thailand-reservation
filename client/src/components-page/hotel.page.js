@@ -5,7 +5,6 @@ class HotelPage extends Component {
     render() {
         return (
             <div>
-                this is hotel page with hotel list
                 <HotelList />
             </div>
         );
