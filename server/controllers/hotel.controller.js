@@ -26,6 +26,26 @@ class HotelController extends BaseCtrl {
                     }
                 })
             })
+        }),
+        super.addAction({
+            path: '/initHotelInfo',
+            method: 'get'
+        }, (req, res) => {
+             Models.HotelModel.where(req.query).find((err, doc) => {
+                super.handleCallback(res, err).then(() => {
+                    if (doc) {
+                        res.send({
+                            isSuccess: true,
+                            data: doc
+                        })
+                    } else {
+                        res.send({
+                            isSuccess: false,
+                            errors: '获取酒店信息失败'
+                        })
+                    }
+                })
+            })
         })
     }
 }
