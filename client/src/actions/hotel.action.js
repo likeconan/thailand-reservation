@@ -8,7 +8,6 @@ export function gethotel(obj) {
                 method: 'GET',
                 params: obj
             }).then((list)=>{
-                debugger;
                 dispatch({
                     type: 'get_hotelList',
                     payload: {
