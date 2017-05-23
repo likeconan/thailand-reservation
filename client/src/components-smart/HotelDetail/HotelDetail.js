@@ -9,7 +9,7 @@ class HotelDetail extends Component {
     constructor(props) {
         debugger;
         super(props);
-        let a=this.props.location.state.from.search;
+        
         //this.props.dispatch(gethotel());
     }
     render() {

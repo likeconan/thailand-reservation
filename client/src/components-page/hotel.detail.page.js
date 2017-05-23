@@ -5,7 +5,7 @@ class HotelDetailPage extends Component {
     render() {
         return (
             <div>
-                <HotelDetail />
+                <HotelDetail />    
             </div>
         );
     }

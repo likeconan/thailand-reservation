@@ -9,6 +9,10 @@ import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 
 import {gethotel } from 'actions/hotel.action';
 
+import {
+  Link
+} from 'react-router-dom'
+
 require('./hotel-list.less');
 
 @connect((store) => {
@@ -21,6 +25,9 @@ class HotelList extends Component {
         super(props);
         this.props.dispatch(gethotel());
     }
+    viewHotelDetail(){
+        
+    }
     render() {
         return (
               <div>
@@ -30,7 +37,7 @@ class HotelList extends Component {
                     key={item.imageurl}
                     title={item.hotelname}
                     subtitle={<span>by <b>{item.hotelname}</b></span>}
-                    actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
+                    actionIcon={<IconButton onClick={this.viewHotelDetail}><StarBorder color="white" /></IconButton>}
                     >
                     <img src={item.imageurl} />
                     </GridTile>

@@ -1,0 +1,19 @@
+[
+    {
+    "hotelname" : "hotel one",
+    "hoteldetail" : "testassasasasasasasa",
+    "imageurl" : "./src/assets/images/hotelImages/hotel.image1.jpg"
+},{
+    "hotelname" : "hotel two",
+    "hoteldetail" : "testassasasasasasasa",
+    "imageurl" : "./src/assets/images/hotelImages/hotel.image2.jpg"
+},{
+    "hotelname" : "hotel three",
+    "hoteldetail" : "testassasasasasasasa",
+    "imageurl" : "./src/assets/images/hotelImages/hotel.image3.jpg"
+},{
+    "hotelname" : "hotel four",
+    "hoteldetail" : "testassasasasasasasa23232323",
+    "imageurl" : "./src/assets/images/hotelImages/hotel.image4.jpg"
+}
+]

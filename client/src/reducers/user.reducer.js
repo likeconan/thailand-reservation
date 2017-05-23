@@ -7,7 +7,7 @@ export default function reducer(state = {
         email: false,
         password: false
     },
-    isAuthorize: false,
+    isAuthorize: true,
 }, action) {
     switch (action.type) {
         case 'EDIT_EMAIL':
