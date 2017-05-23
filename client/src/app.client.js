@@ -49,8 +49,8 @@ ReactDOM.render(
         <div>
           <Pages.Layout>
             <Route path="/hotel" component={Pages.Hotel} />
-            <Route path="/hotelDetail/:hotelId" component={Pages.HotelDetail} />
-            <Route exact path="/login" component={Pages.Login} />
+            <Route path="/hotelDetail/:id" component={Pages.HotelDetail} />
+            <Route path="/login" component={Pages.Login} />
           </Pages.Layout>
         </div>
       </Router>
