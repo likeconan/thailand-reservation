@@ -51,8 +51,8 @@ export default class LeftNav extends Component {
                     <HomeIcon style={styles.icon} />ThailandHotel
                 </div>
                 <SelectableList>
-                    <ListItem primaryText="Hotel" value="/hotel" href="/#/hotel" />
-                    <ListItem primaryText="Users" value="/user" href="/#/user" />
+                    <ListItem primaryText="Hotel" value="/hotel" href="/hotel" />
+                    <ListItem primaryText="Users" value="/user" href="/user" />
                 </SelectableList>
             </Drawer>
         );

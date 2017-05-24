@@ -28,10 +28,11 @@ class HotelController extends BaseCtrl {
             })
         }),
         super.addAction({
-            path: '/initHotelInfo',
+            path: '/hoteldetail',
             method: 'get'
         }, (req, res) => {
-             Models.HotelModel.where(req.query).find((err, doc) => {
+            debugger;
+             Models.HotelModel.where(req.query).findOne((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     if (doc) {
                         res.send({
@@ -47,6 +48,7 @@ class HotelController extends BaseCtrl {
                 })
             })
         })
+       
     }
 }
 
