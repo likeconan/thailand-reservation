@@ -8,7 +8,8 @@ export default (obj) => {
             url: obj.url,
             baseURL: 'http://localhost:3030/',
             method: obj.method ? obj.method : 'GET',
-            data: obj.params
+            params:obj.params,
+            data: obj.data
         }).then((response) => {
             if (response.data.isSuccess) {
                 resolve(response.data.data);

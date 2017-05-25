@@ -1,19 +1,11 @@
 [
-    {
-    "hotelname" : "hotel one",
-    "hoteldetail" : "testassasasasasasasa",
-    "imageurl" : "./src/assets/images/hotelImages/hotel.image1.jpg"
-},{
-    "hotelname" : "hotel two",
-    "hoteldetail" : "testassasasasasasasa",
-    "imageurl" : "./src/assets/images/hotelImages/hotel.image2.jpg"
-},{
-    "hotelname" : "hotel three",
-    "hoteldetail" : "testassasasasasasasa",
-    "imageurl" : "./src/assets/images/hotelImages/hotel.image3.jpg"
-},{
-    "hotelname" : "hotel four",
-    "hoteldetail" : "testassasasasasasasa23232323",
-    "imageurl" : "./src/assets/images/hotelImages/hotel.image4.jpg"
+ {
+    "HotelName" : "hotel one",
+    "HotelRemark" : "Large and beautiful 6 bedroom villa in the heart of Pattaya, in the sought after pratumnak / thapparaya area. A few minutes from the beaches and the famous Walking Street. Large private pool. In a secure residence 24/24. For friends / families. Internet Wi Fi broadband, international TV channels ...",
+    "ImageUrl" : "./src/assets/images/HotelImage/hotel1/9e73cd80-05a4-48d4-8b23-7fe46dbb991c.jpg",
+    "Accommodates" : 14,
+    "Bathrooms" : 7,
+    "Bedrooms" : 6,
+    "Beds" : 6
 }
 ]

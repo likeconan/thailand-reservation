@@ -1,7 +1,7 @@
 import validator from 'validator';
 import thaxios from 'utilities/thaxios';
 
-export function gethotel(obj) {
+export function getHotel(obj) {
     return function (dispatch) {
         thaxios({
                 url: 'hotellist',
@@ -11,9 +11,26 @@ export function gethotel(obj) {
                 dispatch({
                     type: 'get_hotelList',
                     payload: {
-                        hotelList: list.map((data) => {
+                        HotelList: list.map((data) => {
                             return data;
                         })
+                    }
+                })
+            });
+    }
+}
+
+export function getHotelDetail(obj) {
+    return function (dispatch) {
+        thaxios({
+                url: 'hoteldetail',
+                method: 'get',
+                params: obj
+            }).then((data)=>{
+                dispatch({
+                    type: 'get_hoteldetail',
+                    payload: {
+                        HotelDetail: data
                     }
                 })
             });

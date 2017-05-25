@@ -21,7 +21,7 @@ class HotelController extends BaseCtrl {
                     } else {
                         res.send({
                             isSuccess: false,
-                            errors: '获取酒店信息失败'
+                            errors: '获取酒店列表失败'
                         })
                     }
                 })
@@ -31,7 +31,6 @@ class HotelController extends BaseCtrl {
             path: '/hoteldetail',
             method: 'get'
         }, (req, res) => {
-            debugger;
              Models.HotelModel.where(req.query).findOne((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     if (doc) {
@@ -42,7 +41,7 @@ class HotelController extends BaseCtrl {
                     } else {
                         res.send({
                             isSuccess: false,
-                            errors: '获取酒店信息失败'
+                            errors: '获取酒店详情失败'
                         })
                     }
                 })
