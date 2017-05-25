@@ -4,6 +4,7 @@ import UserLogin from 'components-smart/UserLogin/UserLogin'
 
 
 class LoginPage extends Component {
+   
     render() {
         return (
             <div>

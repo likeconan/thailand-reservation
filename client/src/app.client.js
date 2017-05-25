@@ -11,10 +11,10 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Redirect,
-  withRouter
+  Redirect
 } from 'react-router-dom'
-
+import { routeAuthorize } from 'utilities/authorize';
+import history from 'utilities/history';
 
 injectTapEventPlugin();
 
@@ -30,25 +30,34 @@ const customMui = getMuiTheme({
 });
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (
-    store.getState().userReducer.isAuthorize ? (
-      <Component {...props} />
-    ) : (
-        <Redirect to={{
-          pathname: '/login',
-          state: { from: props.location }
-        }} />
-      )
-  )} />
+  <Route {...rest} render={
+    props => {
+      var route = routeAuthorize(location.pathname);
+      debugger
+      var ele = route ?
+        (
+          <Redirect to={{
+            pathname: route,
+            state: { from: props.location }
+          }} />
+        )
+        :
+        (
+          <Component {...props} />
+        )
+
+      return ele;
+    }} />
 )
 
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={muiTheme}>
-      <Router>
+      <Router history={history}>
         <div>
           <Pages.Layout>
             <PrivateRoute path="/" component={Pages.Approve} />
+            <PrivateRoute path="/approve" component={Pages.Approve} />
             <Route path="/hotels" component={Pages.Hotel} />
             <Route exact path="/login" component={Pages.Login} />
           </Pages.Layout>
