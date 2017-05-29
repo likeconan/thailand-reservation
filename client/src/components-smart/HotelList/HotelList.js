@@ -23,7 +23,7 @@ class HotelList extends Component {
         super(props);
         this.props.dispatch(getHotel());
     }
-    viewHotelDetail(id){
+    _viewHotelDetail(id){
        const location = {
             pathname: '/hotelDetail'
                 };
@@ -39,7 +39,7 @@ class HotelList extends Component {
                         <GridTile
                         key={item._id}
                         title={item.HotelName}
-                        actionIcon={<IconButton onClick={()=>this.viewHotelDetail(item._id)}><StarBorder color="white" /></IconButton>}
+                        actionIcon={<IconButton onClick={()=>this._viewHotelDetail(item._id)}><StarBorder color="white" /></IconButton>}
                         >
                         <img src={item.ImageUrl}/>
                         </GridTile>

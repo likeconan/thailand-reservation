@@ -2,8 +2,7 @@ export default function reducer(state = {
     HotelInfo:{
         HotelList:[],
         HotelDetail:{
-            HotelName:"",
-            ImageUrl:""
+            
         }
     },
     
