@@ -24,7 +24,8 @@ class HotelList extends Component {
     }
     _viewHotelDetail(id){
         storage.session('hotel.id', id);
-        window.location.replace('/hotelDetail');
+        //window.location.replace('/hotelDetail');
+        window.location.href=`${window.location.origin}/hotelDetail`;
     }
     render() {
         const { match, location, history } = this.props
