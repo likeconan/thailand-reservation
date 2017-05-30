@@ -25,7 +25,7 @@ const styles = {
         color: typography.textFullWhite,
         lineHeight: `${spacing.desktopKeylineIncrement}px`,
         fontWeight: typography.fontWeightLight,
-        backgroundColor: 'rgb(76, 175, 80)',
+        backgroundColor: 'rgb(0, 188, 212)',
         paddingLeft: spacing.desktopGutter,
         marginBottom: 8,
     },

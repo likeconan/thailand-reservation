@@ -6,6 +6,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText,FlatButton
 import HotelDetailImage from 'components-smart/HotelDetailImage/HotelDetailImage';
 import HotelDetailHotelInfo from 'components-smart/HotelDetailHotelInfo/HotelDetailHotelInfo';
 import HotelDetailHotelOrder from 'components-smart/HotelDetailHotelOrder/HotelDetailHotelOrder';
+import storage from 'store2';
 
 @connect((store) => {
     return {
@@ -16,7 +17,8 @@ import HotelDetailHotelOrder from 'components-smart/HotelDetailHotelOrder/HotelD
 class HotelDetailPage extends Component {
     constructor(props) {
         super(props);
-        this.props.dispatch(getHotelDetail({_id :"5926e04ac6b02297fcda926c"}));
+        const hotelId = storage.session('hotel.id');
+        this.props.dispatch(getHotelDetail({_id :hotelId}));
         this.state = {
             viewHotelsInfo: true,
             orderHotelsRoom:false
