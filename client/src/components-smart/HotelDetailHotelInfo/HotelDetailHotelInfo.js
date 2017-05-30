@@ -54,21 +54,9 @@ class HotelDetailHotelInfo extends Component {
                         <Col xs={4} md={2}>便利设施：</Col>
                         <Col xs={6} md={10}>
                             <Row>
-                            <Col md={4}>
-                                允许携带宠物
-                            </Col>
-                            <Col md={4}>
-                                厨房
-                            </Col>
-                            <Col md={4}>
-                                烟雾报警器
-                            </Col>
-                            <Col md={4}>
-                                无线网络
-                            </Col>
-                            <Col md={4}>
-                                适合举办活动
-                            </Col>
+                            {this.props.info.UsefulFacilities.map((item) => (
+                                <Col md={4} key={item.UsefulItem}>{item.UsefulItem}</Col>
+                            ))}
                             </Row>
                         </Col>
                         </Row>
@@ -82,12 +70,9 @@ class HotelDetailHotelInfo extends Component {
                         <Col xs={4} md={2}>安全设施：</Col>
                         <Col xs={6} md={10}>
                             <Row>
-                            <Col md={4}>
-                                一氧化碳报警器
-                            </Col>
-                            <Col md={4}>
-                                烟雾报警器
-                            </Col>
+                            {this.props.info.SafeFacilities.map((item) => (
+                                <Col md={4} key={item.SafeItem}>{item.SafeItem}</Col>
+                            ))}
                             </Row>
                         </Col>
                         </Row>
@@ -98,7 +83,7 @@ class HotelDetailHotelInfo extends Component {
                         </Col>
                         </Row>
                     </Grid>
-                        </div>
+                </div>
             </hotel-detail>
         );
     }

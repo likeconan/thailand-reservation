@@ -58,8 +58,7 @@ class HotelDetailPage extends Component {
                         secondary={this.state.orderHotelsRoom}/>
                     </CardActions>
                     {this.state.viewHotelsInfo? <HotelDetailHotelInfo 
-                        info ={this.props.HotelInfo.HotelDetail} 
-                        usefulList ={this.props.HotelInfo.HotelDetail.SafeFacilities}/>:""} 
+                        info ={this.props.HotelInfo.HotelDetail}/>:""} 
                     {this.state.orderHotelsRoom? <HotelDetailHotelOrder 
                         roomList={this.props.HotelInfo.HotelDetail.RoomList}/>:""}   
                 </div>  

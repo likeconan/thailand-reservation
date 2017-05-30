@@ -2,7 +2,9 @@ export default function reducer(state = {
     HotelInfo:{
         HotelList:[],
         HotelDetail:{
-            
+            SafeFacilities:[],
+            UsefulFacilities:[],
+            RoomList:[]
         }
     },
     
