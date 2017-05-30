@@ -1,11 +1,71 @@
 [
  {
-    "HotelName" : "hotel one",
-    "HotelRemark" : "Large and beautiful 6 bedroom villa in the heart of Pattaya, in the sought after pratumnak / thapparaya area. A few minutes from the beaches and the famous Walking Street. Large private pool. In a secure residence 24/24. For friends / families. Internet Wi Fi broadband, international TV channels ...",
+    "HotelName" : "芭堤雅",
+    "HotelAddress" : "429 Moo 9, Pattaya Beach Road,芭堤雅海滨路地区,芭堤雅,春武里府,20150,泰国",
+    "HotelRemark" : "<p>别墅位于市中心的理想位置,位于Pattaya和Jomtien之间,设有一个带大型私人游泳池的住宅区</p></br><p>约5分钟的滑板车,您在Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和6间卧室均配有现代浴室。现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两间沙发床位于起居室中,可作为额外睡眠的两个位置。该住宅安静,24小时24小时。所有设施都在附近。</p>",
     "ImageUrl" : "./src/assets/images/HotelImage/hotel1/9e73cd80-05a4-48d4-8b23-7fe46dbb991c.jpg",
     "Accommodates" : 14,
+    "LiveDate" : "14:00 － 02:00（次日）",
     "Bathrooms" : 7,
+    "CheckOutTime" : "12:00",
     "Bedrooms" : 6,
-    "Beds" : 6
+    "HotelFrom" : "独立屋",
+    "Beds" : 6,
+    "HotelType" : "整套房子/公寓",
+    "UsefulFacilities" : [ 
+        {
+            "UsefulItem" : "允许携带宠物"
+        }, 
+        {
+            "UsefulItem" : "厨房"
+        }, 
+        {
+            "UsefulItem" : "烟雾报警器"
+        }, 
+        {
+            "UsefulItem" : "无线网络"
+        }, 
+        {
+            "UsefulItem" : "适合举办活动"
+        }
+    ],
+    "SafeFacilities" : [ 
+        {
+            "SafeItem" : "一氧化碳报警器"
+        }, 
+        {
+            "SafeItem" : "烟雾报警器"
+        }
+    ],
+    "HotelRule" : "Thank you for not smoking in the Villa (but of course, the garden awaits you with ashtrays). In order to respect the sleep of the neighbors, he is not allowed to make noise outside after 21:00 (09:00 PM) There is a deposit of 300 € on arrival (given back at checkout). The price for the electricity is 8 bahts per Kwh. The price for the water is 30 bahts per m3.",
+    "RoomList" : [ 
+        {
+            "RoomName" : "房间1",
+            "ImageUrl" : "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+            "RoomDetail" : "卫生间在室内，有独立办公桌",
+            "BedDetail" : {
+                "BedNum" : 1,
+                "BeadDetail" : "1张特大号床,最多可容纳3人"
+            }
+        }, 
+        {
+            "RoomName" : "房间2",
+            "RoomDetail" : "有舒适飘窗",
+            "ImageUrl" : "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+            "BedDetail" : {
+                "BedNum" : 1,
+                "BeadDetail" : "1张特大床,最多可容纳2人"
+            }
+        }, 
+        {
+            "RoomName" : "房间3",
+            "RoomDetail" : "两张单人床",
+            "ImageUrl" : "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
+            "BedDetail" : {
+                "BedNum" : 2,
+                "BeadDetail" : "1张特大床,最多可容纳2人"
+            }
+        }
+    ]
 }
 ]
