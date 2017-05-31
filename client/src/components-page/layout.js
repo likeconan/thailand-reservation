@@ -4,6 +4,12 @@ import LoggedMenu from 'components-smart/LoggedMenu/LoggedMenu';
 import Toast from 'components-smart/Toast/Toast';
 import LeftNav from 'components-dumb/LeftNav/LeftNav';
 
+const styles = {
+    main: {
+        'position': 'fixed'
+    }
+};
+
 class Layout extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +30,7 @@ class Layout extends Component {
             <div className='layout'>
                 <LeftNav open={this.state.drawerOpen}
                     onRequestChangeNavDrawer={this.handleChangeRequestNavDrawer} />
-                <AppBar title="Home"
+                <AppBar style={styles.main} title="Home"
                     onLeftIconButtonTouchTap={this.clickLeftIconButton.bind(this)}
                     iconElementRight={<LoggedMenu />} />
                 <Toast />

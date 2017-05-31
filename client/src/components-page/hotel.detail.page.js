@@ -8,6 +8,14 @@ import HotelDetailHotelInfo from 'components-smart/HotelDetailHotelInfo/HotelDet
 import HotelDetailHotelOrder from 'components-smart/HotelDetailHotelOrder/HotelDetailHotelOrder';
 import storage from 'store2';
 
+const styles = {
+    main: {
+        'position': 'absolute',
+        'width': '100%',
+        'margin-top': '64px'
+    }
+};
+
 @connect((store) => {
     return {
         HotelInfo: store.hotelReducer.HotelInfo
@@ -38,7 +46,7 @@ class HotelDetailPage extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={styles.main}>
                 <HotelDetailImage 
                 title={this.props.HotelInfo.HotelDetail.HotelName}
                 subtitle={this.props.HotelInfo.HotelDetail.HotelAddress}
