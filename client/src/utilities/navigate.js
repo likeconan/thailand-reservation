@@ -3,7 +3,7 @@ import storage from 'store2';
 import store from '../store';
 
 class Navigate {
-    goToSocialLife() {
+    goToLogin() {
         const path = '/life';
         storage.session('ss.profile.user.id', userId);
         browserHistory.push(path);

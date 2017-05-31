@@ -1,51 +1,48 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Classnames from 'classnames';
-import {GridList, GridTile,IconButton,Subheader} from 'material-ui';
-import { Grid,Row,Col,Tabs,Tab } from 'react-bootstrap';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
-import {getHotel } from 'actions/hotel.action';
+import { GridList, GridTile, IconButton, Subheader } from 'material-ui';
+import { getHotel } from 'actions/hotel.action';
 import storage from 'store2';
+import DivBackImage from 'components-dumb/DivBackImage/DivBackImage'
+import browserHistory from 'react-router/lib/browserHistory';
 
 require('./hotel-list.less');
 
 @connect((store) => {
     return {
-        HotelInfo: store.hotelReducer.HotelInfo
+        HotelList: store.hotelReducer.HotelList
     }
 })
 
 class HotelList extends Component {
-    constructor(props) {
-        super(props);
+
+    componentWillMount() {
         this.props.dispatch(getHotel());
     }
-    _viewHotelDetail(id){
+
+    _viewHotelDetail(id) {
         storage.session('hotel.id', id);
-        //window.location.replace('/hotelDetail');
-        window.location.href=`${window.location.origin}/hotelDetail`;
+        browserHistory.push('/hotelDetail')
     }
     render() {
-        const { match, location, history } = this.props
         return (
             <hotel-list class={Classnames(this.props.className)}>
                 <div className='hotel-div'>
-                    <Row className="show-grid">
-                        {this.props.HotelInfo.HotelList.map((item) => (
-                            <Col md={2} key={item._id}>
-                                <GridTile className="hotel-img"
-                                onClick={()=>this._viewHotelDetail(item._id)}
-                                title={item.HotelName}
-                                >
-                                <img src={item.ImageUrl}/>
-                                </GridTile>
-                            </Col>
-                        ))}
-                    </Row>
+                        {
+                            this.props.HotelList.map((item) => (
+                                <div className='hotel-brief-con' key={item._id}>
+                                    <GridTile className="hotel-img"
+                                        onClick={() => this._viewHotelDetail(item._id)}
+                                        title={item.HotelName}
+                                    >
+                                        <DivBackImage imgSrc={item.ImageUrl} />
+                                    </GridTile>
+                                </div>
+                            ))
+                        }
                 </div>
-            </hotel-list>
+            </hotel-list >
         );
     }
 }

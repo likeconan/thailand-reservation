@@ -22,3 +22,7 @@ export function routeAuthorize(path) {
     }
     return path;
 }
+
+export function setAuthorize(){
+
+}

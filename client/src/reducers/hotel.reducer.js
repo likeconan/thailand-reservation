@@ -1,24 +1,22 @@
 export default function reducer(state = {
-    HotelInfo:{
-        HotelList:[],
-        HotelDetail:{
-            SafeFacilities:[],
-            UsefulFacilities:[],
-            RoomList:[]
-        }
-    },
-    
+    HotelList: [],
+    HotelDetail: {
+        SafeFacilities: [],
+        UsefulFacilities: [],
+        RoomList: []
+    }
+
 }, action) {
     switch (action.type) {
-        case 'get_hotelList':
+        case 'GET_HOTEL_LIST':
             return {
                 ...state,
-                HotelInfo: action.payload
+                HotelList: action.payload
             };
-        case 'get_hoteldetail':
+        case 'GET_HOTEL_DETAIL':
             return {
                 ...state,
-                HotelInfo: action.payload
+                HotelDetail: action.payload
             };
         default:
             return state;

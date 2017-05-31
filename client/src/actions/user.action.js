@@ -1,6 +1,7 @@
 import validator from 'validator';
 import thaxios from 'utilities/thaxios';
-import history from 'utilities/history';
+import Navigate from 'utilities/navigate';
+import storage from 'store2';
 
 export function editEmail(val) {
     return {
@@ -24,21 +25,23 @@ export function editPassword(val) {
 
 export function login(obj) {
     return function (dispatch) {
-        // thaxios({
-        //     url: 'users',
-        //     method: 'GET',
-        //     params: obj
-        // }).then((data) => {
-        //     console.log(data)
-        // })
-        const user = {
-            isAuthorize: true,
-            userRole: 1,
-            email: 'liyijia428@126.com'
-        }
-        dispatch({
-            type: 'USER_LOGIN',
-            payload: user
+        thaxios({
+            url: 'users',
+            method: 'GET',
+            params: obj
+        }).then((data) => {
+            data.isAuthorize = true;
+            dispatch({
+                type: 'USER_LOGIN',
+                payload: data
+            });
+            storage.local('isAuthorize', true);
         })
+
+
     }
+}
+
+export function logout(){
+
 }

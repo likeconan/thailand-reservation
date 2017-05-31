@@ -7,7 +7,7 @@ class LoginPage extends Component {
    
     render() {
         return (
-            <div>
+            <div className='login'>
                 <FullBackground src='./src/assets/images/shutterstock-bangkok-thailand-back.jpg'>
                     <UserLogin />
                 </FullBackground>

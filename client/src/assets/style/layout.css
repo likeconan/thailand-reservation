@@ -8,8 +8,25 @@
     margin: 20px 0;
 }
 
+.margin-rl-10 {
+    margin: 0 10px;
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
 .width-100p {
     width: 100%
+}
+
+.height-100p {
+    height: 100%
 }
 
 h1,
@@ -108,16 +125,23 @@ h6 {
 .img-content-container {
     background-size: cover;
     background-position: 50% 50%;
+    height: 100%;
 }
+
 
 /**************Layout*****************/
-.layout{
-    top: 0;
+
+.layout-full-back {
+    position: fixed;
     width: 100%;
+    top: 0;
+    overflow-y: auto;
 }
 
-.layout .main {
-    position: absolute;
-    width: 100%;
-    margin-top: 64px;
+.layout-padding {
+    padding: 64px 0;
+}
+
+a {
+    color: white;
 }

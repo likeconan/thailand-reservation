@@ -19,7 +19,7 @@ class UserController extends BaseCtrl {
             path: '/users',
             method: 'get'
         }, (req, res) => {
-            Models.UserModel.where(req.query).findOne((err, doc) => {
+            Models.UserModel.where(req.query).select('-password').findOne((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     if (doc) {
                         res.send({

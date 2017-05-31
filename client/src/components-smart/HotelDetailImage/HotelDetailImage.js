@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {GridTile} from 'material-ui';
+import { GridTile } from 'material-ui';
 import Classnames from 'classnames';
+import DivBackImage from 'components-dumb/DivBackImage/DivBackImage'
 
 require('./hotel-detail-image.less');
 
@@ -10,12 +11,12 @@ class HotelDetailImage extends Component {
     }
     render() {
         return (
-             <hotel-img class={Classnames(this.props.className)}>
-                 <div className='img'>
+            <hotel-img class={Classnames(this.props.className)}>
+                <div className='img'>
                     <GridTile
                         title={this.props.title}
                         subtitle={this.props.subtitle}>
-                    <img src={this.props.img} />
+                        <DivBackImage imgSrc={this.props.img} />
                     </GridTile>
                 </div>
             </hotel-img>
