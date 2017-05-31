@@ -36,8 +36,8 @@ class HotelList extends Component {
                         {this.props.HotelInfo.HotelList.map((item) => (
                             <Col md={2} key={item._id}>
                                 <GridTile className="hotel-img"
+                                onClick={()=>this._viewHotelDetail(item._id)}
                                 title={item.HotelName}
-                                actionIcon={<IconButton onClick={()=>this._viewHotelDetail(item._id)}><StarBorder color="white" /></IconButton>}
                                 >
                                 <img src={item.ImageUrl}/>
                                 </GridTile>
