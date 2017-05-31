@@ -7,7 +7,13 @@ export default function reducer(state = {
         email: false,
         password: false
     },
+
     isAuthorize: true,
+    loggedUser: {
+        email: '',
+        _id: '',
+        userRole: 0 //0 for normal,1 for admin
+    },
 }, action) {
     switch (action.type) {
         case 'EDIT_EMAIL':
@@ -33,6 +39,11 @@ export default function reducer(state = {
                     ...state.validation,
                     password: action.payload.isValidated
                 }
+            }
+        case 'USER_LOGIN':
+            return {
+                ...state,
+                loggedUser: action.payload
             }
         default:
             return state;
