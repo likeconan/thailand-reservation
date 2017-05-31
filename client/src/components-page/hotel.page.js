@@ -4,7 +4,7 @@ import HotelList from 'components-smart/HotelList/HotelList'
 class HotelPage extends Component {
     render() {
         return (
-            <div>
+            <div className='main'>
                 <HotelList />
             </div>
         );
