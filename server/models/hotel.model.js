@@ -1,8 +1,7 @@
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    path = require('path');
+    Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
+var HotelSchema = new Schema({
     HotelName: String,
     HotelAddress: String,
     HotelRemark: String,
@@ -20,29 +19,29 @@ var UserSchema = new Schema({
 
 //UsefulFacilities
 var UsefulSchema = new Schema({
-	UsefulItem: String
+    UsefulItem: String
 });
 
 //SafeFacilities
 var SafeSchema = new Schema({
-	SafeItem: String
+    SafeItem: String
 });
 
 //RoomList
 var RoomSchema = new Schema({
-	RoomName: String,
+    RoomName: String,
     ImageUrl: String,
     RoomDetail: String,
-    BedDetail:{
+    BedDetail: {
         BedNum: Number,
         BeadDetail: String
     }
 });
 
-UserSchema.add({
-    UsefulFacilities:[UsefulSchema],
-    SafeFacilities:[SafeSchema],
-    RoomList:[RoomSchema]
+HotelSchema.add({
+    UsefulFacilities: [UsefulSchema],
+    SafeFacilities: [SafeSchema],
+    RoomList: [RoomSchema]
 });
 
-module.exports = mongoose.model('Hotels', UserSchema);
+module.exports = mongoose.model('Hotels', HotelSchema);

@@ -17,15 +17,16 @@ import storage from 'store2';
 class HotelDetailPage extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            viewHotelsInfo: true,
+            orderHotelsRoom: false
+        }
     }
 
     componentWillMount() {
         const hotelId = storage.session('hotel.id');
         this.props.dispatch(getHotelDetail({ _id: hotelId }));
-        this.state = {
-            viewHotelsInfo: true,
-            orderHotelsRoom: false
-        }
+
     }
 
     _viewHotelInfo = () => {

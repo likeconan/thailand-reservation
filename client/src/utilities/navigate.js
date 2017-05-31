@@ -8,7 +8,9 @@ class Navigate {
         storage.session('ss.profile.user.id', userId);
         browserHistory.push(path);
     }
-
+    goTo(path){
+        browserHistory.push(path);
+    }
 }
 
 var navigate = new Navigate();

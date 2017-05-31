@@ -30,18 +30,43 @@ export function login(obj) {
             method: 'GET',
             params: obj
         }).then((data) => {
-            data.isAuthorize = true;
+            var user = data.user;
+            user.isAuthorize = true;
             dispatch({
                 type: 'USER_LOGIN',
-                payload: data
+                payload: user
             });
-            storage.local('isAuthorize', true);
+            storage.local('authorize', data.token);
+            window.location.href = '/';
         })
 
 
     }
 }
 
-export function logout(){
+export function authorize(callback) {
+    return function (dispatch) {
+        thaxios({
+            url: 'users/authorize',
+            method: 'GET'
+        }).then((data) => {
+            debugger
+            if (data) {
+                data.isAuthorize = true;
+                dispatch({
+                    type: 'USER_LOGIN',
+                    payload: data
+                });
+                storage.local('authorize', data);
+                window.location.href = '/';
+            }
+            if (callback) {
+                callback();
+            }
+        })
+    }
+}
+
+export function logout() {
 
 }

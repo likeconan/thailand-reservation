@@ -6,23 +6,29 @@ export function routeAuthorize(path) {
     var role = user.loggedUser.role;
     var path = '';
     if (isAuthorize) {
-        switch (role) {
-            case 0:
-                if (path.indexOf('/approve') >= 0) {
-                    path = '/'
-                }
-                break;
-            case 1:
-                //do nothing
-                break;
+        if (path.indexOf('/login')) {
+            path = '/';
+        } else {
+            switch (role) {
+                case 0:
+                    if (path.indexOf('/approve') >= 0) {
+                        path = '/'
+                    }
 
+                    break;
+                case 1:
+                    //do nothing
+                    break;
+
+            }
         }
+
     } else {
         path = '/login'
     }
     return path;
 }
 
-export function setAuthorize(){
+export function setAuthorizeToken() {
 
 }

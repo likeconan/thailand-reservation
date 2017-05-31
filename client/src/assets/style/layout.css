@@ -12,6 +12,9 @@
     margin: 0 10px;
 }
 
+.margin-rl-20 {
+    margin: 0 20px;
+}
 .center-flex {
     display: flex;
     align-items: center;
@@ -27,6 +30,10 @@
 
 .height-100p {
     height: 100%
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }
 
 h1,

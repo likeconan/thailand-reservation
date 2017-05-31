@@ -1,4 +1,3 @@
-import storage from 'store2';
 
 export default function reducer(state = {
     loginUser: {
@@ -11,8 +10,7 @@ export default function reducer(state = {
     },
     loggedUser: {
         email: '',
-        _id: '',
-        isAuthorize: storage.local('isAuthorize'),
+        isAuthorize: false,
         userRole: 0 //0 for normal,1 for admin
     },
 }, action) {
