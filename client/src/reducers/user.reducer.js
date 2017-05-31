@@ -7,13 +7,13 @@ export default function reducer(state = {
         email: false,
         password: false
     },
+
+    isAuthorize: true,
     loggedUser: {
         email: '',
         _id: '',
-        isAuthorize: false,
         userRole: 0 //0 for normal,1 for admin
     },
-
 }, action) {
     switch (action.type) {
         case 'EDIT_EMAIL':

@@ -6,9 +6,9 @@ export default (obj) => {
     var p = new Promise((resolve, reject) => {
         axios({
             url: obj.url,
-            baseURL: 'http://localhost:9000/',
+            baseURL: 'http://localhost:3030/',
             method: obj.method ? obj.method : 'GET',
-            params: obj.params,
+            params:obj.params,
             data: obj.data
         }).then((response) => {
             if (response.data.isSuccess) {

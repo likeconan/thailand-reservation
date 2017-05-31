@@ -5,6 +5,12 @@ import Toast from 'components-smart/Toast/Toast';
 import LeftNav from 'components-dumb/LeftNav/LeftNav';
 import history from 'utilities/history';
 
+const styles = {
+    main: {
+        'position': 'fixed'
+    }
+};
+
 class Layout extends Component {
     constructor(props) {
         super(props);
@@ -36,7 +42,6 @@ class Layout extends Component {
                         onLeftIconButtonTouchTap={this.clickLeftIconButton.bind(this)}
                         iconElementRight={<LoggedMenu />} />
                 }
-
                 <Toast />
                 {this.props.children}
             </div>

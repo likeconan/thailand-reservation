@@ -49,17 +49,16 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       return ele;
     }} />
 )
-
+//<PrivateRoute path="/" component={Pages.Approve} />
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={muiTheme}>
       <Router history={history}>
         <div>
           <Pages.Layout>
-            <PrivateRoute path="/" component={Pages.Approve} />
-            <PrivateRoute path="/approve" component={Pages.Approve} />
-            <Route path="/hotels" component={Pages.Hotel} />
-            <Route exact path="/login" component={Pages.Login} />
+            <Route path="/hotel" component={Pages.Hotel} />
+            <Route path="/hotelDetail" component={Pages.HotelDetail} />
+            <Route path="/login" component={Pages.Login} />
           </Pages.Layout>
         </div>
       </Router>

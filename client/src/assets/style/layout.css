@@ -112,7 +112,12 @@ h6 {
 
 /**************Layout*****************/
 .layout{
-    position: fixed;
     top: 0;
     width: 100%;
+}
+
+.layout .main {
+    position: absolute;
+    width: 100%;
+    margin-top: 64px;
 }
