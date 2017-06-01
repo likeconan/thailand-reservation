@@ -37,7 +37,7 @@ export function login(obj) {
                 payload: user
             });
             storage.local('authorize', data.token);
-            Navigate.goTo('/');
+            window.location.href = '/';
         })
 
 
@@ -56,9 +56,8 @@ export function authorize(callback) {
                     type: 'USER_LOGIN',
                     payload: data
                 });
-            } else if (callback) {
-                callback();
             }
+            callback();
         })
     }
 }

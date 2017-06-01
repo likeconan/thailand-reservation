@@ -1,7 +1,16 @@
 .user-list-con {
-    width: 500px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
+    display: none;
+    justify-content: space-around;
+    margin: 20px;
+    &.active {
+        height: auto;
+        display: flex;
+    }
+    >div {
+        width: 350px;
+        >h5 {
+            margin-bottom: 20px;
+        }
+    }
 }

@@ -26,7 +26,6 @@ class TopLogged extends Component {
                     <h4>欢迎</h4>
                     <div className='center-flex'>
                         <Link className='margin-rl-20' to="/">酒店列表</Link>
-                        <Link className='margin-rl-20' to="/approve">申请审核</Link>
                     </div>
                     <FlatButton label="退出" labelStyle={{ color: 'white' }} />
                 </div>

@@ -6,21 +6,10 @@ export function routeAuthorize(path) {
     var role = user.loggedUser.role;
     var path = '';
     if (isAuthorize) {
-        if (path.indexOf('/login')) {
+        if (path.indexOf('/login') >= 0) {
             path = '/';
         } else {
-            switch (role) {
-                case 0:
-                    if (path.indexOf('/approve') >= 0) {
-                        path = '/'
-                    }
-
-                    break;
-                case 1:
-                    //do nothing
-                    break;
-
-            }
+            //need to do with other pages in different roles
         }
 
     } else {

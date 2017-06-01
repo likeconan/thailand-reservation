@@ -12,21 +12,36 @@ class ApplyController extends BaseCtrl {
             path: '/apply',
             method: 'post'
         }, (req, res) => {
-
-            new Models.ApplyModel({
+            Models.ApplyModel.where({
                 roomId: req.body.roomId,
                 applyEmail: req.decoded.data.loggedUserEmail,
-                createdAt: new Date(),
-                updatedAt: new Date(),
-                status: 'applying'
-            }).save((err, doc) => {
+            }).find((err, doc) => {
                 super.handleCallback(res, err).then(() => {
-                    res.send({
-                        isSuccess: true,
-                        data: doc
-                    });
+                    if (doc) {
+                        res.send({
+                            isSuccess: false,
+                            errors: '你已经申请过了，无法再次申请'
+                        });
+                    } else {
+                        new Models.ApplyModel({
+                            roomId: req.body.roomId,
+                            applyEmail: req.decoded.data.loggedUserEmail,
+                            createdAt: new Date(),
+                            updatedAt: new Date(),
+                            status: 'applying'
+                        }).save((err, doc) => {
+                            super.handleCallback(res, err).then(() => {
+                                res.send({
+                                    isSuccess: true,
+                                    data: doc
+                                });
+                            })
+                        })
+                    }
+
                 })
             })
+
         });
 
         super.addAction({
@@ -46,19 +61,25 @@ class ApplyController extends BaseCtrl {
         });
 
         super.addAction({
-            path: '/apply/:id',
+            path: '/apply',
             method: 'put'
         }, (req, res) => {
-            Models.ApplyModel.findByIdAndUpdate(req.params.id, {
-                status: req.body.status
-            }, (err, doc) => {
-                super.handleCallback(res, err).then(() => {
-                    res.send({
-                        isSuccess: true,
-                        data: doc
+            Models.ApplyModel.update(
+                {
+                    '_id': {
+                        $in: req.body.ids
+                    }
+                },
+                { status: 'approved', updatedAt: new Date(), modifiedBy: req.decoded.data.loggedUserEmail },
+                { multi: true },
+                (err, doc) => {
+                    super.handleCallback(res, err).then(() => {
+                        res.send({
+                            isSuccess: true,
+                            data: doc
+                        })
                     })
                 })
-            })
         });
     }
 }

@@ -28,7 +28,7 @@ ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={muiTheme}>
       <Router history={browserHistory}>
-        <Route component={Pages.Layout}>
+        <Route  component={Pages.Layout}>
           <Route path="/" component={Pages.HotelList} />
           <Route path="/approve" component={Pages.ApprovePage} />
           <Route path="/hotelDetail" component={Pages.HotelDetail} />
