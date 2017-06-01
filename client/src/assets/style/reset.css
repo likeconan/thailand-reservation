@@ -90,6 +90,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: Microsoft Yahei;
 }
 
 small {
@@ -157,54 +158,8 @@ a {
     text-decoration: none;
 }
 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular'), url(/src/assets/fonts/material-icon.woff2) format('woff2');
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-}
-
-@font-face {
-    font-family: 'montserratregular';
-    src: url('/src/assets/fonts/montserrat/montserrat-regular-webfont.eot');
-    src: url('/src/assets/fonts/montserrat/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/src/assets/fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'), url('/src/assets/fonts/montserrat/montserrat-regular-webfont.woff') format('woff'), url('/src/assets/fonts/montserrat/montserrat-regular-webfont.ttf') format('truetype'), url('/src/assets/fonts/montserrat/montserrat-regular-webfont.svg#montserratregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/src/assets/fonts/roboto/Roboto-Regular.woff2') format('woff2'), url('/src/assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 textarea {
     resize: none;
-}
-
-.mont-font {
-    font-family: 'montserratregular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Microsoft Yahei
-}
-
-.roboto-font {
-    font-family: 'Roboto', sans-serif, Microsoft Yahei;
 }
 
 .sans-font {

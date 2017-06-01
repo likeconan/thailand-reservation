@@ -1,11 +1,14 @@
 var BaseCtrl = require('./base.controller');
 var Models = require('../models');
+var jwt = require('jsonwebtoken');
+
+
 class UserController extends BaseCtrl {
-    constructor() {
+    constructor(lib) {
         super();
-        this.initalAction();
+        this.initalAction(lib);
     }
-    initalAction() {
+    initalAction(lib) {
         super.addAction({
             path: '/users',
             method: 'post'
@@ -38,16 +41,24 @@ class UserController extends BaseCtrl {
             path: '/users',
             method: 'get'
         }, (req, res) => {
-            Models.UserModel.where(req.query).select('-password').findOne((err, doc) => {
+            Models.UserModel.where({
+                email: req.query.email,
+                password: req.query.password
+            }).select('-password').findOne((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     if (doc) {
-                        var token = jwt.sign({
-                            data: {
-                                isAuthorize: true,
-                                loggedUserEmail: doc.email,
-                                userRole: 1
-                            }
-                        }, lib.config.secretKey, '365d')
+                        var token = jwt.sign(
+                            {
+                                data: {
+                                    isAuthorize: true,
+                                    loggedUserEmail: doc.email,
+                                    userRole: 1
+                                }
+                            },
+                            lib.config.secretKey,
+                            {
+                                expiresIn: '365d'
+                            });
                         res.send({
                             isSuccess: true,
                             data: {

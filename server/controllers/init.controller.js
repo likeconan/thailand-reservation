@@ -9,17 +9,16 @@ class InitController extends BaseCtrl {
     }
     initalAction() {
         super.addAction({
-            path: '/initHotel',
+            path: '/init',
             method: 'get'
         }, (req, res) => {
+            //test user
+            new Models.UserModel({
+                email: 'test@123.com',
+                password: '123456',
+                role: 1
+            }).save()
             data.HotelJson.forEach(function (element) {
-                //test user
-                new Models.UserModel({
-                    email: 'test@123.com',
-                    password: '123456',
-                    role: 1
-                }).save()
-
                 var hotel = new Models.HotelModel(element);
                 hotel.save((err, doc) => {
                     if (err) {

@@ -30,7 +30,8 @@ ReactDOM.render(
       <Router history={browserHistory}>
         <Route component={Pages.Layout}>
           <Route path="/" component={Pages.HotelList} />
-          <Route exact path="/hotelDetail" component={Pages.HotelDetail} />
+          <Route path="/approve" component={Pages.ApprovePage} />
+          <Route path="/hotelDetail" component={Pages.HotelDetail} />
           <Route path="/login" component={Pages.Login} />
         </Route>
       </Router>

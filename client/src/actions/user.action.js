@@ -37,7 +37,7 @@ export function login(obj) {
                 payload: user
             });
             storage.local('authorize', data.token);
-            window.location.href = '/';
+            Navigate.goTo('/');
         })
 
 
@@ -50,17 +50,13 @@ export function authorize(callback) {
             url: 'users/authorize',
             method: 'GET'
         }).then((data) => {
-            debugger
             if (data) {
                 data.isAuthorize = true;
                 dispatch({
                     type: 'USER_LOGIN',
                     payload: data
                 });
-                storage.local('authorize', data);
-                window.location.href = '/';
-            }
-            if (callback) {
+            } else if (callback) {
                 callback();
             }
         })

@@ -12,7 +12,14 @@ class ApplyController extends BaseCtrl {
             path: '/apply',
             method: 'post'
         }, (req, res) => {
-            new Models.ApplyModel(req.body).save((err, doc) => {
+
+            new Models.ApplyModel({
+                roomId: req.body.roomId,
+                applyEmail: req.decoded.data.loggedUserEmail,
+                createdAt: new Date(),
+                updatedAt: new Date(),
+                status: 'applying'
+            }).save((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     res.send({
                         isSuccess: true,
@@ -20,14 +27,14 @@ class ApplyController extends BaseCtrl {
                     });
                 })
             })
-        })
+        });
 
         super.addAction({
-            path: '/apply/hotel/:id',
+            path: '/apply/room/:id',
             method: 'get'
         }, (req, res) => {
             Models.ApplyModel.where({
-                hotelId: req.params.id
+                roomId: req.params.id
             }).find((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     res.send({
@@ -44,7 +51,7 @@ class ApplyController extends BaseCtrl {
         }, (req, res) => {
             Models.ApplyModel.findByIdAndUpdate(req.params.id, {
                 status: req.body.status
-            }, function (err, doc) {
+            }, (err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     res.send({
                         isSuccess: true,
@@ -56,4 +63,4 @@ class ApplyController extends BaseCtrl {
     }
 }
 
-module.exports = UserController
+module.exports = ApplyController

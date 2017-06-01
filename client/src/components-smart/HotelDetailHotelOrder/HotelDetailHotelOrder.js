@@ -19,7 +19,10 @@ const RoomInfo = (props) => (
 class HotelDetailHotelOrder extends Component {
 
     apply = (id) => {
-        store.dispatch(apply());
+        debugger
+        store.dispatch(apply({
+            roomId: id
+        }));
     }
 
     render() {

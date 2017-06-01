@@ -23,15 +23,12 @@ class TopLogged extends Component {
         return (
             <top-logged>
                 <div className='center-flex space-between height-100p'>
-                    <h5>Welcome</h5>
+                    <h4>欢迎</h4>
                     <div className='center-flex'>
                         <Link className='margin-rl-20' to="/">酒店列表</Link>
-                        <Link className='margin-rl-20 cursor-pointer' onClick={this.goToDetail}>
-                            酒店详情
-                        </Link>
                         <Link className='margin-rl-20' to="/approve">申请审核</Link>
                     </div>
-                    <FlatButton label="Sign Out" labelStyle={{ color: 'white' }} />
+                    <FlatButton label="退出" labelStyle={{ color: 'white' }} />
                 </div>
             </top-logged>
         );

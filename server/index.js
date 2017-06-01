@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var cors = require('cors')
 var lib = require('./lib');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -11,11 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept,x-access-token");
-    next();
-});
+app.use(cors());
 
 app.use(function (req, res, next) {
     json
@@ -25,18 +22,20 @@ app.use(function (req, res, next) {
                     isAuthorize: false
                 }
             }
-            if (req.url.indexOf('users/authorize') >= 0) {
+            if (lib.helpers.excludeRoutes(req.url)) {
                 req.decoded = decoded;
                 next();
                 return;
             }
             if (err || !decoded.data.isAuthorize) {
-                res.send(403, {
+                res.status(403).send({
                     success: false,
                     message: 'Not authorized'
                 });
             } else {
                 req.decoded = decoded;
+                next();
+                return;
             }
         })
 });

@@ -11,7 +11,7 @@ class HotelController extends BaseCtrl {
             path: '/hotellist',
             method: 'get'
         }, (req, res) => {
-            Models.HotelModel.where(req.query).find((err, doc) => {
+            Models.HotelModel.find((err, doc) => {
                 super.handleCallback(res, err).then(() => {
                     if (doc) {
                         res.send({
@@ -26,27 +26,30 @@ class HotelController extends BaseCtrl {
                     }
                 })
             })
-        }),
-            super.addAction({
-                path: '/hoteldetail',
-                method: 'get'
-            }, (req, res) => {
-                Models.HotelModel.where(req.query).findOne((err, doc) => {
-                    super.handleCallback(res, err).then(() => {
-                        if (doc) {
-                            res.send({
-                                isSuccess: true,
-                                data: doc
-                            })
-                        } else {
-                            res.send({
-                                isSuccess: false,
-                                errors: '获取酒店详情失败'
-                            })
-                        }
-                    })
+        });
+
+        super.addAction({
+            path: '/hoteldetail',
+            method: 'get'
+        }, (req, res) => {
+            Models.HotelModel.where({
+                _id: req.query._id
+            }).findOne((err, doc) => {
+                super.handleCallback(res, err).then(() => {
+                    if (doc) {
+                        res.send({
+                            isSuccess: true,
+                            data: doc
+                        })
+                    } else {
+                        res.send({
+                            isSuccess: false,
+                            errors: '获取酒店详情失败'
+                        })
+                    }
                 })
             })
+        })
 
     }
 }

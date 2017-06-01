@@ -4,6 +4,7 @@ import { showToast } from './toast.action';
 
 export function apply(obj) {
     return function (dispatch) {
+        debugger
         thaxios({
             url: 'apply',
             method: 'POST',
