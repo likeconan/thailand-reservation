@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Link from 'react-router/lib/Link';
 import FlatButton from 'material-ui/FlatButton';
 import { showToast } from 'actions/toast.action';
+import { logOut } from 'actions/user.action';
 import storage from 'store2';
 import store from 'store';
 
@@ -19,6 +20,10 @@ class TopLogged extends Component {
         }
     }
 
+    logOut = () => {
+        store.dispatch(logOut())
+    }
+
     render() {
         return (
             <top-logged>
@@ -27,7 +32,9 @@ class TopLogged extends Component {
                     <div className='center-flex'>
                         <Link className='margin-rl-20' to="/">酒店列表</Link>
                     </div>
-                    <FlatButton label="退出" labelStyle={{ color: 'white' }} />
+                    <FlatButton label="退出"
+                        labelStyle={{ color: 'white' }}
+                        onClick={this.logOut} />
                 </div>
             </top-logged>
         );

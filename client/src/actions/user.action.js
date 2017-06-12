@@ -62,6 +62,11 @@ export function authorize(callback) {
     }
 }
 
-export function logout() {
+export function logOut() {
+    storage.local('authorize', null);
 
+    window.location.href = '/login';
+    return {
+        type: 'USER_LOGOUT'
+    }
 }
