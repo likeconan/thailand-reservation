@@ -104,6 +104,7 @@ p {
 input,
 div[contenteditable] {
     outline: 0;
+    -webkit-text-fill-color: currentcolor !important;
 }
 
 
