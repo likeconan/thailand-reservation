@@ -2,12 +2,13 @@ import axios from 'axios';
 import store from 'store';
 import storage from 'store2';
 import { showToast } from 'actions/toast.action';
+import Config from 'config';
 
 export default (obj) => {
     var p = new Promise((resolve, reject) => {
         axios({
             url: obj.url,
-            baseURL: 'http://localhost:3030/',
+            baseURL: Config.apiUrl,
             method: obj.method ? obj.method : 'GET',
             params: Object.assign({ token: storage.local('authorize') }, obj.params),
             data: obj.data

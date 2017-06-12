@@ -5,7 +5,13 @@ import thunk from "redux-thunk"
 import promise from "redux-promise-middleware"
 
 import reducer from "./reducers"
+import Config from 'config';
 
-const middleware = applyMiddleware(promise(), thunk, logger())
+var middleware;
+if (Config.ifDEV) {
+    middleware = applyMiddleware(promise(), thunk, logger())
+} else {
+    middleware = applyMiddleware(promise(), thunk)
+}
 
 export default createStore(reducer, middleware)

@@ -15,6 +15,13 @@
 .margin-rl-20 {
     margin: 0 20px;
 }
+
+.all-center-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .center-flex {
     display: flex;
     align-items: center;
