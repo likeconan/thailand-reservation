@@ -2,7 +2,7 @@ import thaxios from 'utilities/thaxios';
 import { showToast } from './toast.action';
 
 
-export function apply(obj) {
+export function apply(obj, callback) {
     return function (dispatch) {
         thaxios({
             url: 'apply',
@@ -13,6 +13,9 @@ export function apply(obj) {
                 className: 'success-toast',
                 message: '申请成功,请等待审核'
             }))
+            if (callback) {
+                callback()
+            }
         });
     }
 }

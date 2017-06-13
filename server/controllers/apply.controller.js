@@ -17,7 +17,7 @@ class ApplyController extends BaseCtrl {
                 applyEmail: req.decoded.data.loggedUserEmail,
             }).find((err, doc) => {
                 super.handleCallback(res, err).then(() => {
-                    if (doc) {
+                    if (doc.length) {
                         res.send({
                             isSuccess: false,
                             errors: '你已经申请过了，无法再次申请'

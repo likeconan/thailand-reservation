@@ -15,15 +15,26 @@ class HotelOrderListItem extends Component {
         }
     }
     apply = (id) => {
-        store.dispatch(apply({
-            roomId: id
-        }));
+        store.dispatch(apply(
+            {
+                roomId: id,
+            },
+            () => {
+                if (this.state.active) {
+                    this.setState({
+                        active: !this.state.active
+                    });
+                }
+            })
+        );
+
     }
 
     showDetail = () => {
         this.setState({
             active: !this.state.active
-        })
+        });
+
     }
 
     render() {
@@ -59,12 +70,15 @@ class HotelOrderListItem extends Component {
                         <RaisedButton style={{ marginTop: '40px' }}
                             label="查看申请"
                             secondary={true}
-                            onClick={this.showDetail}
+                            onClick={() => this.showDetail(room._id)}
                         />
                     </Col>
                 </Row>
                 <Row>
-                    <ApplyUserList roomId={room._id} active={this.state.active} />
+                    {
+                        this.state.active &&
+                        <ApplyUserList roomId={room._id} active={this.state.active} />}
+
                 </Row>
             </div>
         );
