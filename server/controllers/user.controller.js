@@ -1,7 +1,7 @@
 var BaseCtrl = require('./base.controller');
 var Models = require('../models');
 var jwt = require('jsonwebtoken');
-
+var axios = require('axios');
 
 class UserController extends BaseCtrl {
     constructor(lib) {
@@ -41,37 +41,50 @@ class UserController extends BaseCtrl {
             path: '/users',
             method: 'get'
         }, (req, res) => {
-            Models.UserModel.where({
-                email: req.query.email,
+            if (!req.query.email) {
+                res.send({
+                    isSuccess: false,
+                    errors: '用户名/密码错误'
+                })
+                return
+            }
+            var userId = req.query.email.substring(0, req.query.email.indexOf('@'))
+            axios.post(lib.config.emailAPI + '/account/login', {
+                userId: userId,
                 password: req.query.password
-            }).select('-password').findOne((err, doc) => {
-                super.handleCallback(res, err).then(() => {
-                    if (doc) {
-                        var token = jwt.sign(
-                            {
-                                data: {
-                                    isAuthorize: true,
-                                    loggedUserEmail: doc.email,
-                                    userRole: 1
-                                }
-                            },
-                            lib.config.secretKey,
-                            {
-                                expiresIn: '365d'
-                            });
-                        res.send({
-                            isSuccess: true,
-                            data: {
-                                user: doc,
-                                token: token
-                            }
-                        })
-                    } else {
-                        res.send({
-                            isSuccess: false,
-                            errors: '用户名/密码错误'
-                        })
+            }).then((result) => {
+                if (result.data) {
+                    var userRole = lib.config.adminUsers.indexOf(result.data.Email) >= 0 ? 1 : 0 //0 for normal,1 for admin
+                    var loggedUser = {
+                        isAuthorize: true,
+                        loggedUserEmail: result.data.Email,
+                        userRole: userRole
                     }
+                    var token = jwt.sign(
+                        {
+                            data: loggedUser
+                        },
+                        lib.config.secretKey,
+                        {
+                            expiresIn: '365d'
+                        });
+                    res.send({
+                        isSuccess: true,
+                        data: {
+                            user: loggedUser,
+                            token: token
+                        }
+                    })
+                } else {
+                    res.send({
+                        isSuccess: false,
+                        errors: '用户名/密码错误'
+                    })
+                }
+            }, (err) => {
+                res.send({
+                    isSuccess: false,
+                    errors: '邮箱服务器出错，请稍后再试'
                 })
             })
         })

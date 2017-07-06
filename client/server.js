@@ -15,7 +15,7 @@ app.listen(normalizePort(), onListening);
 
 function onListening() {
 
-    console.log('yome listend on ' + '3000' + ' and env is ' + process.env.NODE_ENV);
+    console.log('thailand listend on ' + '3000' + ' and env is ' + process.env.NODE_ENV);
 }
 
 function normalizePort() {
