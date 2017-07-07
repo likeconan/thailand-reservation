@@ -4,6 +4,7 @@ export default function reducer(state = {
         email: '',
         password: ''
     },
+    loading: false,
     validation: {
         email: false,
         password: false
@@ -42,7 +43,13 @@ export default function reducer(state = {
         case 'USER_LOGIN':
             return {
                 ...state,
-                loggedUser: action.payload
+                loggedUser: action.payload,
+                loading: false
+            }
+        case 'USER_LOADING':
+            return {
+                ...state,
+                loading: true
             }
         default:
             return state;

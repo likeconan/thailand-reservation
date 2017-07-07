@@ -11,7 +11,8 @@ require('./user-login.less');
     return {
         loginUser: store.userReducer.loginUser,
         validation: store.userReducer.validation,
-        isAuthorize: store.userReducer.loggedUser.isAuthorize
+        isAuthorize: store.userReducer.loggedUser.isAuthorize,
+        loading: store.userReducer.loading
     }
 })
 
@@ -27,10 +28,15 @@ class UserLogin extends Component {
         this.setState({
             submitted: true
         });
-        if (this.props.validation.password && this.props.validation.email) {
+        if (this.props.validation.password && this.props.validation.email && !this.props.loading) {
             this.props.dispatch(login(this.props.loginUser));
         }
 
+    }
+    _onKeyPress = (e) => {
+        if (e.charCode == 13) {
+            this._loginClick()
+        }
     }
 
     render() {
@@ -60,11 +66,12 @@ class UserLogin extends Component {
                             validated={this.props.validation.password}
                             type='password'
                             errorText='请填写密码'
+                            onKeyPress={this._onKeyPress}
                             value={this.props.loginUser.password} />
 
                         <RaisedButton
                             className='width-100p'
-                            label='Get Started'
+                            label={this.props.loading ? 'Loading...' : 'Get Started'}
                             primary={true}
                             onClick={this._loginClick} />
                     </div>

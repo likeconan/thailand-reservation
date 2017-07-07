@@ -25,6 +25,9 @@ export function editPassword(val) {
 
 export function login(obj) {
     return function (dispatch) {
+        dispatch({
+            type: 'USER_LOADING'
+        })
         thaxios({
             url: 'users',
             method: 'GET',

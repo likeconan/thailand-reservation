@@ -48,7 +48,7 @@ class UserController extends BaseCtrl {
                 })
                 return
             }
-            var userId = req.query.email.substring(0, req.query.email.indexOf('@'))
+            var userId = req.query.email.substring(0, req.query.email.indexOf('@shinetechchina.com'))
             axios.post(lib.config.emailAPI + '/account/login', {
                 userId: userId,
                 password: req.query.password
