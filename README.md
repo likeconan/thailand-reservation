@@ -7,7 +7,7 @@
 * Install Git from <a href="https://git-scm.com/downloads" target="_blank">Download</a>
 
 ## Contributors
-        Gao
+        Gao, Linda
 
 ## Essential Parts with Git
 
@@ -46,3 +46,32 @@ and follow the same steps like you do on feature
 
 >#### Then open your browser and navigate to localhost:3000
 
+
+## Conventions and Architecture
+
+        /client
+            /build                                  -- build by webpack and should not be uploaded
+            /config                                 -- used in different environment
+            /src
+                /actions                            -- actions for redux
+                  user.action.js                    -- export function to execute in frontend
+                /components-dumb                    -- dumb components in react without redux
+                  /Styles                           -- styles for components
+                    user-login.less
+                  UserLogin.js
+                /components-page                    -- page components in react
+                /components-smart                   -- smart components in react with redux
+            /reducers                               -- redux reducers
+            /utilities                              -- common functions
+            app.client.js                           -- react root
+            store.js                                -- redux store
+            webpack.config.js
+            server.js
+
+        /server
+            /controllers                           -- all dal functions created in here
+               base.controller.js                  -- implemented
+               user.controller.js
+            /lib                                   -- set config and inital for routes
+            /models                                -- models
+        
