@@ -15,7 +15,6 @@ class ApplyUserList extends Component {
 
     constructor(props) {
         super(props);
-        this.userRole = store.getState().userReducer.loggedUser.userRole;
         this.state = {
             applyUsers: [],
             approvedUsers: []

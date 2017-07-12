@@ -64,10 +64,20 @@ class HotelDetailPage extends Component {
                             onClick={this._orderHotel}
                             secondary={this.state.orderHotelsRoom} />
                     </CardActions>
-                    {this.state.viewHotelsInfo ? <HotelDetailHotelInfo
-                        info={this.props.HotelDetail} /> : ""}
-                    {this.state.orderHotelsRoom ? <HotelDetailHotelOrder
-                        roomList={this.props.HotelDetail.RoomList} /> : ""}
+                    {
+                        this.state.viewHotelsInfo ?
+                            <HotelDetailHotelInfo
+                                info={this.props.HotelDetail} />
+                            :
+                            ""
+                    }
+                    {
+                        this.state.orderHotelsRoom ?
+                            <HotelDetailHotelOrder
+                                roomList={this.props.HotelDetail.RoomList} />
+                            :
+                            ""
+                    }
                 </div>
             </div>
         );

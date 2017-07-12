@@ -10,10 +10,12 @@ import ApplyUserList from 'components-dumb/ApplyUserList/ApplyUserList';
 class HotelOrderListItem extends Component {
     constructor(props) {
         super(props);
+        this.userRole = store.getState().userReducer.loggedUser.userRole;
         this.state = {
             active: false
         }
     }
+
     apply = (id) => {
         store.dispatch(apply(
             {
@@ -45,6 +47,10 @@ class HotelOrderListItem extends Component {
                 <div>详情：{props.info.BeadDetail}</div>
             </div>
         );
+        const text = {
+            applying: '处理中',
+            aproved: '已审核'
+        }
         return (
             <div key={room._id}>
                 <Row className="show-grid">
@@ -67,19 +73,33 @@ class HotelOrderListItem extends Component {
                             onClick={() => this.apply(room._id)}
                             icon={<FavoriteBorder />}
                         />
-                        <RaisedButton style={{ marginTop: '40px' }}
-                            label="查看申请"
-                            secondary={true}
-                            onClick={() => this.showDetail(room._id)}
-                        />
+                        {
+                            !!this.props.status &&
+                            <div>
+                                <small>{'申请状态:' + text[this.props.status]}</small>
+                            </div>
+                        }
+
+                        {
+                            this.state.userRole == 1 &&
+                            <RaisedButton style={{ marginTop: '40px' }}
+                                label="查看申请"
+                                secondary={true}
+                                onClick={() => this.showDetail(room._id)}
+                            />
+                        }
+
                     </Col>
                 </Row>
-                <Row>
-                    {
-                        this.state.active &&
-                        <ApplyUserList roomId={room._id} active={this.state.active} />}
+                {
+                    this.state.userRole == 1 &&
+                    <Row>
+                        {
+                            this.state.active &&
+                            <ApplyUserList roomId={room._id} active={this.state.active} />}
+                    </Row>
+                }
 
-                </Row>
             </div>
         );
     }

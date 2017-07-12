@@ -20,6 +20,20 @@ export function apply(obj, callback) {
     }
 }
 
+export function getMyApply() {
+    return function (dispatch) {
+        thaxios({
+            url: 'apply/myself',
+            method: 'GET'
+        }).then((list) => {
+            dispatch({
+                type: 'GET_MY_APPLIED',
+                payload: list
+            })
+        })
+    }
+}
+
 export function getAppliersByRoomId(id) {
     return thaxios({
         url: 'apply/room/' + id,

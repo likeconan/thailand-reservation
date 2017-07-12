@@ -59,27 +59,50 @@ class ApplyController extends BaseCtrl {
                 })
             })
         });
+        super.addAction({
+            path: '/apply/myself',
+            method: 'get'
+        }, (req, res) => {
+            Models.ApplyModel.where({
+                applyEmail: req.decoded.data.loggedUserEmail,
+            }).find((err, doc) => {
+                super.handleCallback(res, err).then(() => {
+                    res.send({
+                        isSuccess: true,
+                        data: doc
+                    })
+                })
+            })
+        })
 
         super.addAction({
             path: '/apply',
             method: 'put'
         }, (req, res) => {
-            Models.ApplyModel.update(
-                {
-                    '_id': {
-                        $in: req.body.ids
-                    }
-                },
-                { status: 'approved', updatedAt: new Date(), modifiedBy: req.decoded.data.loggedUserEmail },
-                { multi: true },
-                (err, doc) => {
-                    super.handleCallback(res, err).then(() => {
-                        res.send({
-                            isSuccess: true,
-                            data: doc
+            if (req.decoded.data.userRole == 1) {
+                Models.ApplyModel.update(
+                    {
+                        '_id': {
+                            $in: req.body.ids
+                        }
+                    },
+                    { status: 'approved', updatedAt: new Date(), modifiedBy: req.decoded.data.loggedUserEmail },
+                    { multi: true },
+                    (err, doc) => {
+                        super.handleCallback(res, err).then(() => {
+                            res.send({
+                                isSuccess: true,
+                                data: doc
+                            })
                         })
                     })
+            } else {
+                res.send({
+                    isSuccess: false,
+                    errors: '你没有权限修改'
                 })
+            }
+
         });
     }
 }
