@@ -49,7 +49,7 @@ class HotelOrderListItem extends Component {
         );
         const text = {
             applying: '处理中',
-            aproved: '已审核'
+            approved: '已审核'
         }
         return (
             <div key={room._id}>
