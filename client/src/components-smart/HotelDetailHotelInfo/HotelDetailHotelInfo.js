@@ -21,7 +21,7 @@ class HotelDetailHotelInfo extends Component {
                                         可住：{this.props.info.Accommodates}
                                     </Col>
                                     <Col md={6}>
-                                        入住时间：{this.props.info.LiveDate}
+                                        入住时间：{this.props.info.OpenData}
                                     </Col>
                                 </Row>
                                 <Row>
@@ -29,7 +29,7 @@ class HotelDetailHotelInfo extends Component {
                                         卫生间：{this.props.info.Bathrooms}
                                     </Col>
                                     <Col md={6}>
-                                        退房时间：{this.props.info.LiveDate}
+                                        退房时间：{this.props.info.EndData}
                                     </Col>
                                 </Row>
                                 <Row>

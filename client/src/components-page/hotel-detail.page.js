@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import Classnames from 'classnames';
 import { connect } from 'react-redux';
 import { getHotelDetail } from 'actions/hotel.action';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText, FlatButton } from 'material-ui';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText, FlatButton, GridTile } from 'material-ui';
 import HotelDetailImage from 'components-smart/HotelDetailImage/HotelDetailImage';
 import HotelDetailHotelInfo from 'components-smart/HotelDetailHotelInfo/HotelDetailHotelInfo';
 import HotelDetailHotelOrder from 'components-smart/HotelDetailHotelOrder/HotelDetailHotelOrder';
 import storage from 'store2';
+import DivBackImage from 'components-dumb/DivBackImage/DivBackImage'
 
 @connect((store) => {
     return {
@@ -44,13 +45,21 @@ class HotelDetailPage extends Component {
     render() {
         return (
             <div>
-                <HotelDetailImage
-                    title={this.props.HotelDetail.HotelName}
-                    subtitle={this.props.HotelDetail.HotelAddress}
-                    img={this.props.HotelDetail.ImageUrl} />
+                <div>
+                    {
+                        this.props.HotelDetail.ImageUrlList != undefined ?
+                            <HotelDetailImage title={this.props.HotelDetail.HotelName}
+                                imgUrlList={this.props.HotelDetail.ImageUrlList} />
+                            :
+                            ""
+                    }
+                </div>
 
                 <div className='container'>
-                    <CardTitle title={this.props.HotelDetail.HotelName} />
+                    <CardTitle title={<div>{this.props.HotelDetail.HotelName} <span style={{fontSize:14, fontWeight:'bold'}}>({this.props.HotelDetail.OpenData} 至 {this.props.HotelDetail.EndData})</span></div>} />
+                    <CardText>
+                        {this.props.HotelDetail.HotelAddress}
+                    </CardText>
                     <CardText>
                         <div dangerouslySetInnerHTML={{ __html: this.props.HotelDetail.HotelRemark }} />
                     </CardText>
