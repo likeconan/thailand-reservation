@@ -3,9 +3,10 @@ var mongoose = require('mongoose'),
 
 var HotelSchema = new Schema({
     HotelName: String,
+    OpenData: String,
+    EndData:String,
     HotelAddress: String,
     HotelRemark: String,
-    ImageUrl: String,
     Accommodates: Number,
     LiveDate: String,
     Bathrooms: Number,
@@ -38,10 +39,16 @@ var RoomSchema = new Schema({
     }
 });
 
+//ImageList
+var ImageSchema=new Schema({
+    Path:String
+});
+
 HotelSchema.add({
     UsefulFacilities: [UsefulSchema],
     SafeFacilities: [SafeSchema],
-    RoomList: [RoomSchema]
+    RoomList: [RoomSchema],
+    ImageUrlList:[ImageSchema]
 });
 
 module.exports = mongoose.model('Hotels', HotelSchema);

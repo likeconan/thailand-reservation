@@ -34,9 +34,9 @@ class HotelList extends Component {
                                 <div className='hotel-brief-con' key={item._id}>
                                     <GridTile className="hotel-img"
                                         onClick={() => this._viewHotelDetail(item._id)}
-                                        title={item.HotelName}
+                                        title={<div>{item.HotelName} <span style={{fontSize:12}}>({item.OpenData} 至 {item.EndData})</span></div>}
                                     >
-                                        <DivBackImage imgSrc={item.ImageUrl} />
+                                        <DivBackImage imgSrc={item.ImageUrlList[0].Path} />
                                     </GridTile>
                                 </div>
                             ))
