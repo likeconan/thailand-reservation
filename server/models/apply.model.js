@@ -4,6 +4,7 @@ var mongoose = require('mongoose'),
 var ApplySchema = new Schema({
     applyEmail: { type: String },
     roomId: { type: String },
+    comment: { type: String },
     status: { type: String }, //applying,approved,rejected
     modifiedBy: { type: String },
     createdAt: {

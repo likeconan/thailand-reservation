@@ -68,8 +68,19 @@ class ApplyUserList extends Component {
                                             this.state.applyUsers.map((val, key) => {
                                                 return (<ListItem primaryText={val.applyEmail}
                                                     key={key}
-                                                    secondaryText={moment(val.createdAt).format('YYYY-MM-DD hh:mm')}
-                                                    leftCheckbox={this.userRole ? <Checkbox onCheck={(event, checked) => { this.checkedUser(checked, val._id) }} /> : null}
+                                                    secondaryText={
+                                                        <div style={{
+                                                            height: 'auto',
+                                                            display: 'block',
+                                                            whiteSpace:'initial'
+                                                        }}>
+                                                            <p style={{
+                                                                fontSize: 14
+                                                            }}>{moment(val.createdAt).format('YYYY-MM-DD hh:mm')}</p>
+                                                            <small>{val.comment}</small>
+                                                        </div>
+                                                    }
+                                                    leftCheckbox={<Checkbox onCheck={(event, checked) => { this.checkedUser(checked, val._id) }} />}
                                                     rightAvatar={<Avatar>{val.applyEmail.charAt(0).toUpperCase()}</Avatar>} />);
                                             })
                                         }

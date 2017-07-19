@@ -34,6 +34,8 @@ class FormTextField extends Component {
             type={this.props.type}
             floatingLabelFocusStyle={blue}
             underlineFocusStyle={blue}
+            multiLine={this.props.multiLine}
+            fullWidth={this.props.fullWidth}
             floatingLabelStyle={this.props.white
                 ? white
                 : {}}

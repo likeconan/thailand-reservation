@@ -25,6 +25,7 @@ class ApplyController extends BaseCtrl {
                     } else {
                         new Models.ApplyModel({
                             roomId: req.body.roomId,
+                            comment: req.body.comment,
                             applyEmail: req.decoded.data.loggedUserEmail,
                             createdAt: new Date(),
                             updatedAt: new Date(),

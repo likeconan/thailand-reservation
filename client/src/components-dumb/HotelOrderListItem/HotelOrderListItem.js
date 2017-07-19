@@ -3,7 +3,7 @@ import { Grid, Row, Col, Tabs, Tab } from 'react-bootstrap';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText, RaisedButton, GridTile } from 'material-ui';
 import FavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import FontIcon from 'material-ui/FontIcon';
-import { apply } from 'actions/apply.action';
+import { toggleComment } from 'actions/apply.action';
 import store from 'store';
 import ApplyUserList from 'components-dumb/ApplyUserList/ApplyUserList';
 
@@ -16,20 +16,11 @@ class HotelOrderListItem extends Component {
         }
     }
 
-    apply = (id) => {
-        store.dispatch(apply(
-            {
-                roomId: id,
-            },
-            () => {
-                if (this.state.active) {
-                    this.setState({
-                        active: !this.state.active
-                    });
-                }
-            })
-        );
-
+    openApplyDialog = (id) => {
+        store.dispatch(toggleComment({
+            open: true,
+            roomId: id
+        }))
     }
 
     showDetail = () => {
@@ -49,7 +40,7 @@ class HotelOrderListItem extends Component {
         );
         const text = {
             applying: '处理中',
-            approved: '已审核'
+            approved: '已通过'
         }
         return (
             <div key={room._id}>
@@ -70,7 +61,7 @@ class HotelOrderListItem extends Component {
                         <RaisedButton className="order-room"
                             label="预定"
                             primary={true}
-                            onClick={() => this.apply(room._id)}
+                            onClick={() => this.openApplyDialog(room._id)}
                             icon={<FavoriteBorder />}
                         />
                         {
@@ -81,7 +72,7 @@ class HotelOrderListItem extends Component {
                         }
 
                         {
-                            this.state.userRole == 1 &&
+                            this.userRole == 1 &&
                             <RaisedButton style={{ marginTop: '40px' }}
                                 label="查看申请"
                                 secondary={true}
@@ -92,7 +83,7 @@ class HotelOrderListItem extends Component {
                     </Col>
                 </Row>
                 {
-                    this.state.userRole == 1 &&
+                    this.userRole == 1 &&
                     <Row>
                         {
                             this.state.active &&

@@ -58,3 +58,17 @@ export function approveUsers(ids, callback) {
         });
     }
 }
+
+export function toggleComment(open) {
+    return {
+        type: 'TOGGLE_COMMENT_DIALOG',
+        payload: open
+    }
+}
+
+export function editComment(val) {
+    return {
+        type: 'EDIT_COMMENT',
+        payload:val
+    }
+}

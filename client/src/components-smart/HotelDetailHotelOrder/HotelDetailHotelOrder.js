@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
 import HotelOrderListItem from 'components-dumb/HotelOrderListItem/HotelOrderListItem'
+import CommentDialog from 'components-smart/CommentDialog/CommentDialog'
 import Classnames from 'classnames';
 import { connect } from 'react-redux';
 import { getMyApply } from 'actions/apply.action';
+
 require('./hotel-detail-hotel-order.less');
 
 @connect((store) => {
@@ -34,6 +36,7 @@ class HotelDetailHotelOrder extends Component {
                         }
                     </Grid>
                 </div>
+                <CommentDialog />
             </hotel-detail>
         );
     }
