@@ -1,92 +1,347 @@
 [
- {
-    "HotelName" : "芭堤雅",
-    "OpenData" : "2017-08-02",
-    "EndData" : "2017-10-02",
-    "HotelAddress" : "429 Moo 9, Pattaya Beach Road,芭堤雅海滨路地区,芭堤雅,春武里府,20150,泰国",
-    "HotelRemark" : "<p>别墅位于市中心的理想位置,位于Pattaya和Jomtien之间,设有一个带大型私人游泳池的住宅区</p></br><p>约5分钟的滑板车,您在Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和6间卧室均配有现代浴室。现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两间沙发床位于起居室中,可作为额外睡眠的两个位置。该住宅安静,24小时24小时。所有设施都在附近。</p>",
-    "ImageUrlList" : [ 
-        {
-            "Path" : "./src/assets/images/HotelImage/hotel1/hotelImage1.jpg"
-        }, 
-        {
-            "Path" : "./src/assets/images/HotelImage/hotel1/hotelImage2.jpg"
-        },
-        {
-            "Path" : "./src/assets/images/HotelImage/hotel1/hotelImage3.jpg"
-        }, 
-        {
-            "Path" : "./src/assets/images/HotelImage/hotel1/hotelImage4.jpg"
-        },
-        {
-            "Path" : "./src/assets/images/HotelImage/hotel1/hotelImage5.jpg"
-        }, 
-        {
-            "Path" : "./src/assets/images/HotelImage/hotel1/hotelImage6.jpg"
-        }
-    ],
-    "Accommodates" : 14,
-    "LiveDate" : "14:00 － 02:00（次日）",
-    "Bathrooms" : 7,
-    "CheckOutTime" : "12:00",
-    "Bedrooms" : 6,
-    "HotelFrom" : "独立屋",
-    "Beds" : 6,
-    "HotelType" : "整套房子/公寓",
-    "UsefulFacilities" : [ 
-        {
-            "UsefulItem" : "允许携带宠物"
-        }, 
-        {
-            "UsefulItem" : "厨房"
-        }, 
-        {
-            "UsefulItem" : "烟雾报警器"
-        }, 
-        {
-            "UsefulItem" : "无线网络"
-        }, 
-        {
-            "UsefulItem" : "适合举办活动"
-        }
-    ],
-    "SafeFacilities" : [ 
-        {
-            "SafeItem" : "一氧化碳报警器"
-        }, 
-        {
-            "SafeItem" : "烟雾报警器"
-        }
-    ],
-    "HotelRule" : "Thank you for not smoking in the Villa (but of course, the garden awaits you with ashtrays). In order to respect the sleep of the neighbors, he is not allowed to make noise outside after 21:00 (09:00 PM) There is a deposit of 300 € on arrival (given back at checkout). The price for the electricity is 8 bahts per Kwh. The price for the water is 30 bahts per m3.",
-    "RoomList" : [ 
-        {
-            "RoomName" : "房间1",
-            "ImageUrl" : "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
-            "RoomDetail" : "卫生间在室内，有独立办公桌",
-            "BedDetail" : {
-                "BedNum" : 1,
-                "BeadDetail" : "1张特大号床,最多可容纳3人"
+    {
+        "HotelName": "芭堤雅",
+        "OpenData": "2017-10-15",
+        "EndData": "2017-10-31",
+        "HotelAddress": "房源位于芭堤雅, Chonburi, 泰国",
+        "HotelRemark": "<p>别墅位于市中心的理想位置,位于Pattaya和Jomtien之间,设有一个带大型私人游泳池的住宅区</p></br><p>约5分钟的滑板车,您在Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和6间卧室均配有现代浴室。现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两间沙发床位于起居室中,可作为额外睡眠的两个位置。该住宅安静,24小时24小时。所有设施都在附近。</p>",
+        "ImageUrlList": [
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage1.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage2.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage3.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage4.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage5.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage6.jpg"
             }
-        }, 
-        {
-            "RoomName" : "房间2",
-            "RoomDetail" : "有舒适飘窗",
-            "ImageUrl" : "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
-            "BedDetail" : {
-                "BedNum" : 1,
-                "BeadDetail" : "1张特大床,最多可容纳2人"
+        ],
+        "Accommodates": 15,
+        "Bathrooms": 7,
+        "Bedrooms": 6,
+        "HotelFrom": "别墅",
+        "Beds": 7,
+        "HotelType": "整套房子/公寓",
+        "UsefulFacilities": [
+            {
+                "UsefulItem": "允许携带宠物"
+            },
+            {
+                "UsefulItem": "厨房"
+            },
+            {
+                "UsefulItem": "烟雾报警器"
+            },
+            {
+                "UsefulItem": "无线网络"
+            },
+            {
+                "UsefulItem": "适合举办活动"
             }
-        }, 
-        {
-            "RoomName" : "房间3",
-            "RoomDetail" : "两张单人床",
-            "ImageUrl" : "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
-            "BedDetail" : {
-                "BedNum" : 2,
-                "BeadDetail" : "1张特大床,最多可容纳2人"
+        ],
+        "SafeFacilities": [
+            {
+                "SafeItem": "一氧化碳报警器"
+            },
+            {
+                "SafeItem": "烟雾报警器"
             }
-        }
-    ]
-}
+        ],
+        "HotelRule": "屋内禁止吸烟，只允许在阳台。在外出和夜间的时候请锁好门窗，开启警报装置。请勿制造噪音。请节约用水用电，当超过一定额度会额外收取费用。",
+        "RoomList": [
+            {
+                "RoomName": "房间1",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "RoomDetail": "1张特大号床,1张单人床",
+                "BedDetail": {
+                    "BedNum": 2,
+                    "BeadDetail": "最多可容纳3人"
+                }
+            },
+            {
+                "RoomName": "房间2",
+                "RoomDetail": "1张特大号床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间3",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间4",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间5",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间6",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "共用空间",
+                "RoomDetail": "2张地板床垫",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            }
+        ]
+    },
+    {
+        "HotelName": "春武里",
+        "OpenData": "2017-10-31",
+        "EndData": "2017-11-04",
+        "HotelAddress": "房源位于Pattaya , 春武里(Chon Buri), 泰国。",
+        "HotelRemark": "<p>大和美丽的5间卧室的别墅位于芭堤雅的心脏地带,距离海滩和著名的步行街只有几分钟的路程。私人游泳池。安静,与附近的所有设施。在别墅的居住著名确保24/24。大客厅,台球,国际电视,宽带无线网络。</p></br><p>别墅有自己的游泳池。理想地位于市中心,芭堤雅和佐治亚之间的一个住宅公园。约5分钟的滑板车,您是Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和5间卧室:1间带双人床和现代浴室的主卧室,3间带双人床和共用浴室的卧室,花园中的一间洋房是fith卧室,并设有浴室。设备齐全的现代厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两个可供2人使用的沙发床可在客厅内使用,可作为额外睡眠。该住宅安静,24小时/ 24小时,设有一个大型热带花园。所有设施都在附近。</p>",
+        "ImageUrlList": [
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/1.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/2.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/3.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/4.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/5.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/6.jpg"
+            }
+        ],
+        "Accommodates": 13,
+        "Bathrooms": 5,
+        "Bedrooms": 5,
+        "HotelFrom": "别墅",
+        "Beds": 6,
+        "HotelType": "整套房子/公寓",
+        "UsefulFacilities": [
+            {
+                "UsefulItem": "允许携带宠物"
+            },
+            {
+                "UsefulItem": "厨房"
+            },
+            {
+                "UsefulItem": "烟雾报警器"
+            },
+            {
+                "UsefulItem": "无线网络"
+            },
+            {
+                "UsefulItem": "适合举办活动"
+            }
+        ],
+        "SafeFacilities": [
+            {
+                "SafeItem": "一氧化碳报警器"
+            },
+            {
+                "SafeItem": "烟雾报警器"
+            }
+        ],
+        "HotelRule": "屋内禁止吸烟，只允许在阳台。在外出和夜间的时候请锁好门窗，开启警报装置。请勿制造噪音。请节约用水用电，当超过一定额度会额外收取费用。",
+        "RoomList": [
+            {
+                "RoomName": "房间1",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "RoomDetail": "1张特大号床",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间2",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间3",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间4",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间5",
+                "RoomDetail": "1张特大号床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "共用空间",
+                "RoomDetail": "1张单人床，2张沙发床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 3,
+                    "BeadDetail": "最多可容纳3人"
+                }
+            }
+        ]
+    },
+    {
+        "HotelName": "芭堤雅",
+        "OpenData": "2017-11-05",
+        "EndData": "2017-11-12",
+        "HotelAddress": "房源位于芭堤雅, 春武里(Chon Buri), 泰国",
+        "HotelRemark": "<p>大和美丽的5间卧室的别墅位于芭堤雅的心脏地带,距离海滩和著名的步行街只有几分钟的路程。私人游泳池。安静,与附近的所有设施。在别墅的居住著名确保24/24。大客厅,台球,国际电视,宽带无线网络。</p></br><p>别墅有自己的游泳池。理想地位于市中心,芭堤雅和佐治亚之间的一个住宅公园。约5分钟的滑板车,您是Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和5间卧室:1间带双人床和现代浴室的主卧室,3间带双人床和共用浴室的卧室,花园中的一间洋房是fith卧室,并设有浴室。设备齐全的现代厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两个可供2人使用的沙发床可在客厅内使用,可作为额外睡眠。该住宅安静,24小时/ 24小时,设有一个大型热带花园。所有设施都在附近。</p>",
+        "ImageUrlList": [
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/1.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/2.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/3.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/4.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/5.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/6.jpg"
+            }
+        ],
+        "Accommodates": 10,
+        "Bathrooms": 6,
+        "Bedrooms": 5,
+        "HotelFrom": "独立屋",
+        "Beds": 5,
+        "HotelType": "整套房子/公寓",
+        "UsefulFacilities": [
+            {
+                "UsefulItem": "不适合携带宠物"
+            },
+            {
+                "UsefulItem": "厨房"
+            },
+            {
+                "UsefulItem": "烟雾报警器"
+            },
+            {
+                "UsefulItem": "无线网络"
+            },
+            {
+                "UsefulItem": "适合举办活动"
+            }
+        ],
+        "SafeFacilities": [
+            {
+                "SafeItem": "一氧化碳报警器"
+            },
+            {
+                "SafeItem": "烟雾报警器"
+            }
+        ],
+        "HotelRule": "屋内禁止吸烟，只允许在阳台。在外出和夜间的时候请锁好门窗，开启警报装置。请勿制造噪音。请节约用水用电，当超过一定额度会额外收取费用。",
+        "RoomList": [
+            {
+                "RoomName": "房间1",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "RoomDetail": "1张特大号床",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间2",
+                "RoomDetail": "1张特大号床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间3",
+                "RoomDetail": "1张特大号床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间4",
+                "RoomDetail": "1张特大号床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            },
+            {
+                "RoomName": "房间5",
+                "RoomDetail": "1张大床",
+                "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
+                "BedDetail": {
+                    "BedNum": 1,
+                    "BeadDetail": "最多可容纳2人"
+                }
+            }
+        ]
+    }
 ]

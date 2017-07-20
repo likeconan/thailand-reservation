@@ -26,7 +26,8 @@ export function editPassword(val) {
 export function login(obj) {
     return function (dispatch) {
         dispatch({
-            type: 'USER_LOADING'
+            type: 'USER_LOADING',
+            payload: true
         })
         thaxios({
             url: 'users',
@@ -41,6 +42,11 @@ export function login(obj) {
             });
             storage.local('authorize', data.token);
             window.location.href = '/';
+        }).catch(() => {
+            dispatch({
+                type: 'USER_LOADING',
+                payload: false
+            })
         })
 
 
@@ -60,6 +66,8 @@ export function authorize(callback) {
                     payload: data
                 });
             }
+            callback();
+        }).catch(function () {
             callback();
         })
     }

@@ -12,17 +12,15 @@ class InitController extends BaseCtrl {
             path: '/init',
             method: 'get'
         }, (req, res) => {
-            data.HotelJson.forEach(function (element) {
-                var hotel = new Models.HotelModel(element);
-                hotel.save((err, doc) => {
-                    if (err) {
-                        res.send(err)
-                    } else {
-                        res.send(doc);
-                    }
-                })
+            var hotels = data.HotelJson.map((val) => {
+                return new Models.HotelModel(val)
+            })
+            Models.HotelModel.insertMany(hotels).then((doc) => {
+                res.send(doc)
+            }).catch((err) => {
+                res.send(err)
+            })
 
-            }, this);
         });
     }
 }

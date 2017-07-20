@@ -49,7 +49,7 @@ export default function reducer(state = {
         case 'USER_LOADING':
             return {
                 ...state,
-                loading: true
+                loading: action.payload
             }
         default:
             return state;
