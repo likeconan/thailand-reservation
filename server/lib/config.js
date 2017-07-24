@@ -4,7 +4,7 @@ module.exports = {
         db_connect: 'mongodb://localhost:27017/Thailand',
         secretKey: 'thailand',
         emailAPI: 'http://116.211.7.158:6789/api',
-        adminUsers: ['mayn@shinetechchina.com', 'tiany@shinetechchina.com', 'meijh@shinetechchina.com']
+        adminUsers: ['mayn@shinetechchina.com', 'tiany@shinetechchina.com', 'meijh@shinetechchina.com','liyijia@shinetechchina.com']
     },
     production: {
         port: 3030,
