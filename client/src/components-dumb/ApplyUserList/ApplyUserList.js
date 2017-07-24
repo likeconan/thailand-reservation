@@ -72,7 +72,7 @@ class ApplyUserList extends Component {
                                                         <div style={{
                                                             height: 'auto',
                                                             display: 'block',
-                                                            whiteSpace:'initial'
+                                                            whiteSpace: 'initial'
                                                         }}>
                                                             <p style={{
                                                                 fontSize: 14
@@ -106,7 +106,18 @@ class ApplyUserList extends Component {
                                     this.state.approvedUsers.map((val, key) => {
                                         return (<ListItem primaryText={val.applyEmail}
                                             key={key}
-                                            secondaryText={moment(val.createdAt).format('YYYY-MM-DD hh:mm')}
+                                            secondaryText={
+                                                <div style={{
+                                                    height: 'auto',
+                                                    display: 'block',
+                                                    whiteSpace: 'initial'
+                                                }}>
+                                                    <p style={{
+                                                        fontSize: 14
+                                                    }}>{moment(val.createdAt).format('YYYY-MM-DD hh:mm')}</p>
+                                                    <small>{val.comment}</small>
+                                                </div>
+                                            }
                                             rightAvatar={<Avatar>{val.applyEmail.charAt(0).toUpperCase()}</Avatar>} />);
                                     })
                                 }
