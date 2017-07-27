@@ -7,22 +7,22 @@
         "HotelRemark": "<p>别墅位于市中心的理想位置,位于Pattaya和Jomtien之间,设有一个带大型私人游泳池的住宅区</p></br><p>约5分钟的滑板车,您在Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和6间卧室均配有现代浴室。现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两间沙发床位于起居室中,可作为额外睡眠的两个位置。该住宅安静,24小时24小时。所有设施都在附近。</p>",
         "ImageUrlList": [
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage1.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/1.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage2.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/2.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage3.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/3.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage4.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/4.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage5.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/5.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage6.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/6.jpg"
             }
         ],
         "Accommodates": 15,
@@ -256,12 +256,6 @@
             },
             {
                 "Path": "./src/assets/images/HotelImage/hotel3/4.jpg"
-            },
-            {
-                "Path": "./src/assets/images/HotelImage/hotel3/5.jpg"
-            },
-            {
-                "Path": "./src/assets/images/HotelImage/hotel3/6.jpg"
             }
         ],
         "Accommodates": 10,
