@@ -19,10 +19,10 @@ var plguins = [
     new ScriptExtHtmlWebpackPlugin({
         defaultAttribute: 'async'
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: ["vendor", "manifest"], // vendor libs + extracted manifest
-        minChunks: Infinity,
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'runtime', // vendor libs + extracted manifest
+    //     minChunks: Infinity,
+    // }),
     new webpack.HashedModuleIdsPlugin(),
     new WebpackChunkHash(),
     new ChunkManifestPlugin({
@@ -44,7 +44,7 @@ if (env != 'development') {
 
 
 module.exports = {
-    entry: ['./src/app.client.js'],
+    entry: './src/app.client.js',
     output: {
         path: path.resolve(__dirname),
         filename: 'build/bundle.[chunkhash].js',
