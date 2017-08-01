@@ -24,6 +24,24 @@
             },
             {
                 "Path": "./src/assets/images/HotelImage/hotel1/6.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/7.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/8.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/9.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/10.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/11.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel1/12.jpg"
             }
         ],
         "Accommodates": 15,
@@ -149,6 +167,18 @@
             },
             {
                 "Path": "./src/assets/images/HotelImage/hotel2/6.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/7.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/8.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/9.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel2/10.jpg"
             }
         ],
         "Accommodates": 13,
@@ -259,6 +289,24 @@
             },
             {
                 "Path": "./src/assets/images/HotelImage/hotel3/4.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/5.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/6.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/7.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/8.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/9.jpg"
+            },
+            {
+                "Path": "./src/assets/images/HotelImage/hotel3/10.jpg"
             }
         ],
         "Accommodates": 10,
