@@ -2,9 +2,10 @@
     {
         "HotelName": "芭堤雅",
         "OpenData": "2017-10-15",
+        "Key": 1,
         "EndData": "2017-10-31",
         "HotelAddress": "房源位于芭堤雅, Chonburi, 泰国",
-        "HotelRemark": "<p>别墅位于市中心的理想位置,位于Pattaya和Jomtien之间,设有一个带大型私人游泳池的住宅区</p></br><p>约5分钟的滑板车,您在Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和6间卧室均配有现代浴室。现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两间沙发床位于起居室中,可作为额外睡眠的两个位置。该住宅安静,24小时24小时。所有设施都在附近。</p>",
+        "HotelRemark": "这是一套独立公寓／别墅，有大而美丽的6间卧室， 大型私人游泳池，位于芭堤雅的中心,在繁华的pratumnak/ thapparaya街区后面，位于Pattaya和Jomtien之间。几分钟路程外，有海滩，著名的步行街，购物中心,当地市场,餐馆,酒吧，洗衣房，杂货店，旅行社，出租车等方便生活和娱乐的设施。这里位于24/24小时安全，安静区域，6间卧室均配有现代浴室，房屋具备大客厅，台球室，电视室，现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉…)，有两条高速无线宽带, WIFI,国际电视频道…两间沙发床位于起居室中,可作为额外睡眠的两个位置",
         "ImageUrlList": [
             {
                 "Path": "./src/assets/images/HotelImage/hotel1/hotelImage1.jpg"
@@ -64,7 +65,7 @@
                 "RoomDetail": "1张特大号床,1张单人床",
                 "BedDetail": {
                     "BedNum": 2,
-                    "BeadDetail": "最多可容纳3人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 单人床的size为1.2*2m, 每个人都配单独的被子，该房间最多可容纳3人"
                 }
             },
             {
@@ -73,7 +74,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -82,7 +83,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -91,7 +92,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -100,7 +101,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -109,7 +110,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -126,9 +127,10 @@
     {
         "HotelName": "春武里",
         "OpenData": "2017-10-31",
+        "Key": 2,
         "EndData": "2017-11-04",
         "HotelAddress": "房源位于Pattaya , 春武里(Chon Buri), 泰国。",
-        "HotelRemark": "<p>大和美丽的5间卧室的别墅位于芭堤雅的心脏地带,距离海滩和著名的步行街只有几分钟的路程。私人游泳池。安静,与附近的所有设施。在别墅的居住著名确保24/24。大客厅,台球,国际电视,宽带无线网络。</p></br><p>别墅有自己的游泳池。理想地位于市中心,芭堤雅和佐治亚之间的一个住宅公园。约5分钟的滑板车,您是Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和5间卧室:1间带双人床和现代浴室的主卧室,3间带双人床和共用浴室的卧室,花园中的一间洋房是fith卧室,并设有浴室。设备齐全的现代厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两个可供2人使用的沙发床可在客厅内使用,可作为额外睡眠。该住宅安静,24小时/ 24小时,设有一个大型热带花园。所有设施都在附近。</p>",
+        "HotelRemark": "这是一套独立公寓／别墅。有5间卧室，位于市中心, 在芭堤雅和佐治亚之间的一个住宅公园。约5分钟的路程到达Jomtien海滩或者芭堤雅著名的步行街。大客厅,台球室,电视室,厨房和5间卧室:1间带双人床和现代浴室的主卧室,3间带双人床和共用浴室的卧室,花园中的一间洋房是fith卧室,并设有浴室。设备齐全的现代厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两个可供2人使用的沙发床可在客厅内使用,可作为额外睡眠。该住宅安静,24小时/ 24小时,设有一个大型热带花园。所有设施都在附近。",
         "ImageUrlList": [
             {
                 "Path": "./src/assets/images/HotelImage/hotel2/1.jpg"
@@ -188,7 +190,7 @@
                 "RoomDetail": "1张特大号床",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -197,7 +199,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -206,7 +208,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -215,7 +217,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -224,7 +226,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -240,10 +242,11 @@
     },
     {
         "HotelName": "芭堤雅",
+        "Key": 3,
         "OpenData": "2017-11-05",
         "EndData": "2017-11-12",
         "HotelAddress": "房源位于芭堤雅, 春武里(Chon Buri), 泰国",
-        "HotelRemark": "<p>大和美丽的5间卧室的别墅位于芭堤雅的心脏地带,距离海滩和著名的步行街只有几分钟的路程。私人游泳池。安静,与附近的所有设施。在别墅的居住著名确保24/24。大客厅,台球,国际电视,宽带无线网络。</p></br><p>别墅有自己的游泳池。理想地位于市中心,芭堤雅和佐治亚之间的一个住宅公园。约5分钟的滑板车,您是Jomtien海滩,芭堤雅或着名的步行街。大客厅,台球室,电视室,厨房和5间卧室:1间带双人床和现代浴室的主卧室,3间带双人床和共用浴室的卧室,花园中的一间洋房是fith卧室,并设有浴室。设备齐全的现代厨房(炉灶,大冰箱,咖啡壶,微波炉,菜肴...)。两个可供2人使用的沙发床可在客厅内使用,可作为额外睡眠。该住宅安静,24小时/ 24小时,设有一个大型热带花园。所有设施都在附近。</p>",
+        "HotelRemark": "<p>这是一套独立公寓／别墅，位于芭堤雅的中心,在繁华的pratumnak/ thapparaya街区后面，位于Pattaya和Jomtien之间的战略位置。安静的环境使其成为家庭度假的理想场所。</p></br><p>—— 拥有宽敞的5间卧室和6间浴室，还带有私人游泳池和热带花园 - 房子通风,功能齐全,感觉像家一样:</p><p>—— 所有卧室都有配套的浴室,厨房和客厅区附近也有。 </p><p>—— 所有卧室都设有大号床/特大号床和储物空间 所有卧室均配有高品质空调系统。</p><p>—— 设备齐全的厨房,配有基本的器具,微波炉,冰箱,烤面包机,电热水壶以及电烤箱和炉灶。 </p> <p>—— 提供洗衣和熨烫设备</p> <p>—— 您可以获得高速WiFi网络连接,免费+无限制 （There is fibre internet available at the villa 50M down 20M up）</p>",
         "ImageUrlList": [
             {
                 "Path": "./src/assets/images/HotelImage/hotel3/1.jpg"
@@ -303,7 +306,7 @@
                 "RoomDetail": "1张特大号床",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -312,7 +315,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -321,7 +324,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/doubleRoom.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -330,7 +333,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom2.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -339,7 +342,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel1/room1/singleRoom1.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "最多可容纳2人"
+                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             }
         ]

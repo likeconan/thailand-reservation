@@ -4,6 +4,7 @@ var mongoose = require('mongoose'),
 var HotelSchema = new Schema({
     HotelName: String,
     OpenData: String,
+    Key: Number,
     EndData:String,
     HotelAddress: String,
     HotelRemark: String,

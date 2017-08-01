@@ -20,7 +20,7 @@ class HotelDetailImage extends React.Component {
                 {
                     this.props.imgUrlList.map((item) => (
                         <div className='hotel-brief-con' key={item._id}>
-                            <DivBackImage imgSrc={item.Path} />
+                            <DivBackImage className='contain' imgSrc={item.Path} />
                         </div>
                     ))
                 }
