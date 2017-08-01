@@ -8,22 +8,22 @@
         "HotelRemark": "这是一套独立公寓／别墅，有大而美丽的6间卧室， 大型私人游泳池，位于芭堤雅的中心,在繁华的pratumnak/ thapparaya街区后面，位于Pattaya和Jomtien之间。几分钟路程外，有海滩，著名的步行街，购物中心,当地市场,餐馆,酒吧，洗衣房，杂货店，旅行社，出租车等方便生活和娱乐的设施。这里位于24/24小时安全，安静区域，6间卧室均配有现代浴室，房屋具备大客厅，台球室，电视室，现代化的设备齐全的厨房(炉灶,大冰箱,咖啡壶,微波炉…)，有两条高速无线宽带, WIFI,国际电视频道…两间沙发床位于起居室中,可作为额外睡眠的两个位置",
         "ImageUrlList": [
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage1.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/1.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage2.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/2.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage3.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/3.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage4.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/4.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage5.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/5.jpg"
             },
             {
-                "Path": "./src/assets/images/HotelImage/hotel1/hotelImage6.jpg"
+                "Path": "./src/assets/images/HotelImage/hotel1/6.jpg"
             }
         ],
         "Accommodates": 15,
@@ -259,12 +259,6 @@
             },
             {
                 "Path": "./src/assets/images/HotelImage/hotel3/4.jpg"
-            },
-            {
-                "Path": "./src/assets/images/HotelImage/hotel3/5.jpg"
-            },
-            {
-                "Path": "./src/assets/images/HotelImage/hotel3/6.jpg"
             }
         ],
         "Accommodates": 10,
