@@ -34,7 +34,7 @@ class HotelDetailHotelInfo extends Component {
                                 </Row>
                                 <Row>
                                     <Col md={4}>
-                                        卧室：{this.props.info.Beds}
+                                        卧室：{this.props.info.Bedrooms}
                                     </Col>
                                     <Col md={6}>
                                         房源类型：{this.props.info.HotelFrom}
@@ -42,7 +42,7 @@ class HotelDetailHotelInfo extends Component {
                                 </Row>
                                 <Row>
                                     <Col md={4}>
-                                        床铺：{this.props.info.Bedrooms}
+                                        床铺：{this.props.info.Beds}
                                     </Col>
                                     <Col md={6}>
                                         房屋类型：{this.props.info.HotelType}
