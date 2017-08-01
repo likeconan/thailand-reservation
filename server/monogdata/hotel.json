@@ -190,7 +190,7 @@
                 "RoomDetail": "1张特大号床",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -226,7 +226,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel2/room/room5.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -300,7 +300,7 @@
                 "RoomDetail": "1张特大号床",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -309,7 +309,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel3/room/room2.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -318,7 +318,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel3/room/room3.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -327,7 +327,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel3/room/room4.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "特大号床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             },
             {
@@ -336,7 +336,7 @@
                 "ImageUrl": "./src/assets/images/HotelImage/hotel3/room/room5.jpg",
                 "BedDetail": {
                     "BedNum": 1,
-                    "BeadDetail": "大床的size为1.8m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
+                    "BeadDetail": "大床的size为1.5m*2m, 每个人都配单独的被子，该房间最多可容纳2人"
                 }
             }
         ]
