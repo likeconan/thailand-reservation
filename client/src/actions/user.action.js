@@ -42,6 +42,11 @@ export function login(obj) {
             });
             storage.local('authorize', data.token);
             window.location.href = '/';
+        }, () => {
+            dispatch({
+                type: 'USER_LOADING',
+                payload: false
+            })
         }).catch(() => {
             dispatch({
                 type: 'USER_LOADING',
