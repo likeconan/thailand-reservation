@@ -44,7 +44,7 @@ if (env != 'development') {
 
 
 module.exports = {
-    entry: './src/app.client.js',
+    entry: ['babel-polyfill', './src/app.client.js'],
     output: {
         path: path.resolve(__dirname),
         filename: 'build/bundle.[chunkhash].js',
