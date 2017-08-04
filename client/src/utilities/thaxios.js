@@ -20,6 +20,7 @@ export default (obj) => {
                     className: 'error-toast',
                     message: response.data.errors
                 }))
+                reject();
             }
         }).catch((err) => {
             //need to be do with toast

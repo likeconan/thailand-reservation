@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"rm -rf build\" \"webpack --watch\" \"nodemon server.js\" ",
-    "start": "concurrently \"rm -rf build\" \"webpack\" \"nodemon server.js\" "
+    "start": "concurrently \"rm -rf build\" \"webpack --watch\" \"nodemon server.js\" "
   },
   "dependencies": {
     "axios": "^0.16.1",
