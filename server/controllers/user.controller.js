@@ -52,7 +52,7 @@ class UserController extends BaseCtrl {
                 var loggedUser = {
                     isAuthorize: true,
                     loggedUserEmail: result.data.Email,
-                    userRole: 0
+                    userRole: 1
                 }
                 var token = jwt.sign(
                     {
