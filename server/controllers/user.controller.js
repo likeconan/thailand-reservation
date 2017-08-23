@@ -49,14 +49,13 @@ class UserController extends BaseCtrl {
                 return
             }
             if (req.query.email == 'testuser@test.com' && req.query.password == '123456') {
-                var loggedUser = {
-                    isAuthorize: true,
-                    loggedUserEmail: result.data.Email,
-                    userRole: 1
-                }
                 var token = jwt.sign(
                     {
-                        data: loggedUser
+                        data: {
+                            isAuthorize: true,
+                            loggedUserEmail: 'testuser@test.com',
+                            userRole: 1
+                        }
                     },
                     lib.config.secretKey,
                     {
@@ -65,7 +64,11 @@ class UserController extends BaseCtrl {
                 res.send({
                     isSuccess: true,
                     data: {
-                        user: loggedUser,
+                        user: {
+                            isAuthorize: true,
+                            loggedUserEmail: 'testuser@test.com',
+                            userRole: 1
+                        },
                         token: token
                     }
                 })
