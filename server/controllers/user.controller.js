@@ -48,7 +48,7 @@ class UserController extends BaseCtrl {
                 })
                 return
             }
-            if (!req.query.email == 'testuser@test.com' && req.query.password == '123456') {
+            if (req.query.email == 'testuser@test.com' && req.query.password == '123456') {
                 var loggedUser = {
                     isAuthorize: true,
                     loggedUserEmail: result.data.Email,
